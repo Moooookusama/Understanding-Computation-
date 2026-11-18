@@ -1,0 +1,109 @@
+> **BLACK STAR**  
+>  
+> “The naive American contemplates the sky, the Russian, or at least that Russian, settles in the sky, and contemplates the Earth.”  
+> *— Chris Marker on Tarkovsky*
+
+*Mokusama · 22.5566,114.0982 · 22,10,2026 · VOL.001 — VL / VVVV · CREATIVE COMPUTING*
+
+*Self-Directed Learning · Program Structure · A Critical View of Tools*
+
+# Understanding Computation: Complexity and Its Limits.
+
+**Structured Notes on Self-Study Creative Computing with vvvv gamma**
+
+Don't just learn to use tools. Try to see how they are built, and whether you can change them yourself.
+
+*OBSERVE. DECOMPOSE. ABSTRACT. RECOMPOSE.*
+
+---
+
+## 01 / WHO IS THIS FOR?
+
+**If you've done a little programming, you're ready to get started on your own.**
+
+If you've worked with Processing, openFrameworks, TouchDesigner, Pure Data / Max, Grasshopper, Houdini, UE Blueprints, or Blender Geometry Nodes—or written a little Python, C, or Java, and know what `if` and `for` mean—you probably already have enough of a foundation to begin.
+
+My advice: don't rush to find a tutorial that promises to take you "from zero to expert." Draw yourself a map, then start taking things apart, using them, comparing them, and putting them back together.
+
+## 02 / THE METHOD
+
+**Keep It Simple: Decompose, Encapsulate, and Experiment.**
+
+Take a function apart: see what data it receives, what operations it performs, and what it returns. Then encapsulate those steps in a new function. Take a Patch apart, understand the data relationships between its nodes, and try reorganizing it.
+
+Repeat the process. It applies to functions, software, and complex systems alike. Building a bicycle, a rocket, or a Dyson sphere are obviously different challenges, but understanding any system often begins by identifying its components, interfaces, relationships, and layers.
+
+> **CORE IDEA**  
+> **Decomposition**  
+> **＋ Encapsulation**  
+> **＋ Abstraction**  
+> The goal isn't to memorize every node, but to gradually understand how a program is built from smaller units of computation.
+
+## 03 / VL IS A CONSTRUCTION KIT
+
+**Start with basic primitives and build the system up.**
+
+VL provides the basic elements needed to construct programs. In theory, you can start with these primitives and build increasingly complex computational processes layer by layer. In practice, of course, there's no need to start from scratch every time: the core and community libraries in the vvvv ecosystem already encapsulate a wide range of commonly used capabilities.
+
+The key is that using a library doesn't mean you understand it. Every library may have its own organization, naming conventions, abstraction boundaries, dependencies, and particular ways of thinking and working in VL. Understanding its interface is the first step. Asking why it is organized that way is how you begin to see its deeper structure.
+
+> *Treat a library as a structure to investigate, not just a menu of features to call.*
+
+## 04 / ECOSYSTEMS ARE MADE
+
+**Libraries don't grow in nature.**
+
+Community contributors turn recurring needs into libraries, package experimental methods as tools, and share those tools with others. Credit is due to these developers and open-source contributors—many of the capabilities we can call on today are the result of their ongoing work.
+
+But a library is not a transparent container. It may embody its own design assumptions, depend on other libraries, and change with new releases. Such as [**Kairos**](https://github.com/natan-sinigaglia/vvvv.Kairos) has undergone multiple iterations. (A complete framework for data control and composition in the vvvv visual programming environment.) that remind us that a technical ecosystem is itself a system that must be understood and maintained.
+
+So don't see yourself only as a "user." You can write small tools of your own, encapsulate your own methods, and experiment with libraries. Explore other people's work at the vvvv Worldwide Meetup (recordings of past meetups are available on YouTube). Observe how they define and organize problems, build tools, and share methods.
+
+## 05 / A MAP, NOT A DOGMA
+
+**Use The Gray Book as a map.**
+
+There's no need to rush into inventing something new when you're just starting to learn. First, learn how to find, read, and use existing functions and libraries; then gradually trace their inputs, outputs, data types, and internal relationships. [**The Gray Book**](https://thegraybook.vvvv.org/) is a useful entry point for looking up concepts, core libraries, and system information, but it doesn't have to be your only path to learning.
+
+Start by building an index around the media tasks you know: 2D and 3D, images, audio, control structures, UI, and how data is transformed and flows between nodes. You don't need to memorize everything at once. What matters is knowing what you're looking at, what it's connected to, and where to look next.
+
+## 06 / READ THE PATCH
+
+**Don't focus only on the output. Read the program's structure.**
+
+When people open a Patch, many first look for its outputs and parameter controls: change a value and watch the image; change another and look for a better result. This is an effective way to use a tool, but it mainly answers the question: "How do I use this tool to get the result I want?"
+
+If you want to understand program structure and build more complex systems, you need to ask another set of questions:
+
+> **→ Where does the data come from?**  
+> **→ What computations does it go through?**  
+> **→ Which parts have been encapsulated as functions or nodes?**  
+> **→ If you change one layer, where will the effects propagate?**
+
+The same Patch can be treated as a parameter-tuning interface or as a diagram of computational relationships. The difference lies not entirely in the software, but in how you choose to read it.
+
+## 07 / THE BLACK BOX QUESTION
+
+**Tools make things easier, but they can also hide computational structures.**
+
+Tools make things easier, but they can also make structures invisible. Encapsulation is necessary; without abstraction, it is difficult to organize complex systems. But when we interact only with the parameters and interfaces a tool provides, never asking about its internal logic, convenience can gradually turn into dependence.
+
+AI magnifies this problem: what it generates is not merely a black box, but a black box layered with language, probabilities, and training data. For researchers outside the field of AI, taking it apart and forming concepts around it becomes more difficult and costly.
+
+Tools are created by people. At the same time, their interfaces, default workflows, and forms of abstraction shape people's habits of thought. If you can work only within the interfaces predefined by a particular piece of software, and struggle to continue once you leave it, then what you've mastered may be the operating procedures of one toolset—not transferable computational skills.
+
+> **The question isn't whether to use a blackbox, but whether you can open it or build another one when necessary.**
+
+---
+
+This is the first article in the series.  
+Rather than introducing tools, algorithms, and examples in a step-by-step manner, this series aims to offer a framework for self-directed learning to those who prefer free exploration. In the coming months, I'll gradually share more specific, advanced material.
+
+> In the early days, learning vvvv often depended not on a closed set of tutorials, but on forum discussions, shared Patches, shared work, and open-ended exploration. The ecosystem has continued to grow not because any one tool has some magical power, but because creative and experimental developers, artists, architects, musicians, engineers, designers, students, and educators around the world have taken part in building an open, free, and collaborative creative community. This ecosystem could not have taken shape without the contributions of its participants, or their willingness to document their knowledge, experience, and experiments. The boundaries of vvvv have never been fixed; they continue to expand—not only at the level of tools, but also in methods, ways of thinking, and ways of working. If you're looking for a more structured, sustainable, and continually expandable way to create, this ecosystem is worth observing, understanding, and even taking part in.
+
+---
+
+**Mokusama**  
+Designer / Artist | Art & Technology · Creative Computing  
+Connecting creative communities and makers  
+# vvvvcommunity
