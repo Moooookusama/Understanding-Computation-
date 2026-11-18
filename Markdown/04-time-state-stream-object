@@ -1,0 +1,161 @@
+> **SICP CH.3**  
+>  
+> *Μεταβάλλον ἀναπαύεται*  
+> *Even while it changes, it stands still.*  
+> *— Heraclitus*  
+> *Plus ça change, plus c'est la même chose.*  
+> *The more it changes, the more it stays itself.*  
+> *— Alphonse Karr*
+
+*Mokusama · 22.5566,114.0982 · 07,11,2026 · VOL.004 — VL / VVVV · CREATIVE COMPUTING*
+
+*Time · State · Stream · Object*
+
+# Understanding Computation: Time, State, Stream, Object
+
+**Structured Notes on Self-Study Creative Computing with vvvv gamma**
+
+A purely conceptual function has no friction; reality, though, hands time back to us. To understand state and stream is to understand how change gets arranged.
+
+*TIME. STATE. STREAM. OBJECT.*
+
+---
+
+## 01 / TIME & STATE
+
+**An ideal, static way of knowing. Until reality hands time back.**
+
+If we abstract the problem we need to solve into something a programming language can describe, and then let the computer compute it —  
+then **process abstraction** and **data abstraction** should in theory already be able to do all the work.  
+And elegant **pure functional programming** is the embodiment of that idea; it even wants to dispense with "state" altogether.  
+This is an ideal, static way of knowing. It fits very well with how humans imagine conceptual things.  
+But once these things start to compute, the limits of reality appear, for example:
+
+**Time**
+
+Humans hold an overall sense of time as "**everything flowing, everything changing**"  
+A computer has no such feeling; it only computes **step by step**, one step after another, in order  
+But the physical world is finite. Things must happen step by step; they cannot all be computed in one instant.  
+So "flow" gets broken into "**step by step**", and the result of one step has to be handed to the next. This thing that is passed between steps and remembered, we call **State**.
+
+When a thing's interior changes with use, and its behavior depends on that change, it is a **stateful** object. Pure functional programming, by contrast, treats state as an ordinary value, passing it in and out in plain sight, and keeps itself clean that way.
+
+## 02 / FRAME
+
+**Once state becomes visible, everything starts to change.**
+
+A single change in data splits state into original data / current data, and the slice of state on either side of the change is called a **Frame**.
+
+**vvvv sorts nodes into two kinds: stateful / stateless.**
+
+On the left, a stateless node; on the right, the ones with **grey double lines** are **stateful nodes**. That means it is a function whose interior changes and passes those changes along.
+
+![A stateless SineWave node on the left; a stateful LFO node, marked by grey double lines, on the right](images/04-fig-1.png)
+
+State, or the introduction of time, adds a new dimension to the complexity of deeply nested, interconnected function frameworks; everything begins to change.
+
+In text-based programming, state is encapsulated inside objects and managed through local or global calls; the process of change is almost invisible.
+
+While **vvvv**, through **Data Flow**, lays the change and transfer of state out completely and explicitly, so that the granularity of every data change is visible to the naked eye.
+
+In **vvvv**'s runtime** (vvvv keeps the runtime on by default, at all times)**, the **global frame** stays on at all times, so state updates inside every **Process** node are compiled into the process automatically.
+
+## 03 / CHANGE PROPAGATION
+
+**Change is not one-directional; it has to be constrained.**
+
+Inside and outside a function, and between one function and another, the relationship of data and of **propagation of change** is not one-directional. Complexity can unfold in many directions, in many frequencies, and then some unavoidable problems appear: **concurrency race conditions deadlock**...  
+What then has to be thought about is:
+
+How to effectively constrain this **propagation of change**
+
+Two ways of controlling **propagation of change** emerge here:
+
+**Object-based / Stream-based**
+
+**Object-based** means designing a module's internal rules of change in advance, and designing the time function itself.  
+**Stream-based** is another paradigm: seeing time as an infinitely extending sequence.
+
+## 03 / STREAM & VVVV
+
+**Seeing time as an infinitely extending sequence.**
+
+As a visual programming environment, vvvv carries this idea of **stream** all the way to the visual level: on the basis of this paradigm, we can manage things by hand upstream and downstream of any data —
+
+It is much like adding valves, dampers, and other components to a **pressurized three-dimensional urban water network**—repairing, extending, maintaining, and iterating on the pipes while the supply is never cut off, and so achieving more transparent, controllable, and efficient management of the whole network.
+
+In vvvv, the two approaches can be combined. Beyond that, vvvv also offers flexible **Pad**, **Public Channels**, and various tools built by community developers, for flexible management.
+
+## 04 / TIME AS INFRASTRUCTURE
+
+**Time is an infrastructure, invented precisely so that not all things happen at once.**
+
+*— quoted from graffiti on a wall of a building in Cambridge*
+
+A computer itself has no concept of time; time is **discrete**, and everything about it can be defined and designed.  
+The **Timeline** we all know, as a commonly used **time** management feature, is in fact closer to a specific management tool for data change built on a **linear logical clock**.
+
+**It is not that changes in data produce time,  
+but that, by capturing and perceiving change,  
+a person obtains a perceptual experience of time**
+
+## 05 / OBJECT / OOP
+
+**Understand the essence first, then master the method.**
+
+One last point about **object orientation / OOP**  
+Understanding its essence is far quicker than learning syntax  
+This passage from Professor **Sussman** is extremely incisive:
+
+**“What an object actually is, is not obvious at all.  
+We like to see the world as objects because thinking that way saves effort—an economy of thought.**
+
+**I am an object, you are an object, we are not the same object. I can cut the world in two: me and you. When I want to discuss how I work, I mostly need not involve you; and when discussing you, I need not involve me.**
+
+**I have blood pressure, body temperature, respiratory rate, blood glucose concentration... and thousands upon thousands—in fact millions, tens of millions—of ‘state variables’, which together describe what state ‘I as a particle’ is in; you have an astronomical number of state variables too.**
+
+**And my state and your state are for the most part decoupled.  
+So I can compute ‘me’ on my own, without bothering about ‘you’.  
+If we insist on computing both of us at once, the number of states to consider is the product of your states and mine; computed separately, it is roughly just addition.**
+
+**Of course there is real coupling between us: when I speak to you, your state changes; when I look at you, my state changes too. If I suddenly shout, your blood pressure jumps. So only a very few state variables are interconnected.**
+
+**But—seeing the world as ‘a pile of independent states, independent particles’ is not always right.  
+Many of the bugs in quantum mechanics, and many of the bugs in our heads when we try to understand quantum mechanics, come from this: the coupling is far deeper than it appears, yet we insist on breaking it into independent fragments, only because that is efficient to compute and because we have been trained to think that way.”**
+
+**“How do you know whether there really is an ‘object’?  
+...You grab one of them and change it, and see whether the other one changes.  
+If it doesn't, then there are two.”**
+
+*— 1986, MIT, Structure and Interpretation of Computer Programs*
+
+Object-oriented programming can be pursued in vvvv. As noted, the various paradigms and the different paths of development are all choices of engineering route made in response to different problems.
+
+**Functional**, **object-oriented**, and **data-flow** styles all present a high degree of transparency in vvvv / VL, and can be combined and freely chosen according to the situation.
+
+---
+
+This is the fourth article in the series.
+
+Basically, I take the angle of understanding computation** (more precisely, the structure and interpretation of computer programs)** and use it to enter and unfold the exploration of vvvv / VL. It is the structural foundation of every programming language; as for the various syntaxes, features, frameworks, libraries, tools... they all unfold around these basic principles, and can be understood as a kind of “internal skill.” Perhaps reading it will not concretely give you anything, but once you step into these fields, what you do and think about every day is basically dealing with them.
+
+Some friends may find concepts they have never seen before obscure and hard to grasp......  
+That's all right. **Human complexity is unimaginable, but computer programs are not like that.**Treat **vvvv** as your object, and after a stretch of free exploration you will have a deep feel for these concepts.
+
+Back to the title of the first article: **Complexity and Its Limits**  
+What these pieces mainly introduce is:
+
+**The basic technical principles of controlling complexity**
+
+**People are always going through so-called “paradigm shifts.” On the surface we are embracing technological convenience; in reality it is a transfer of control over complexity.**
+
+**The transfer of complexity is not free of cost. Black-boxing, transparency, control, ultimate accountability, skill atrophy, loss of expressive precision... these are real problems that follow close behind.**
+
+**I hope these things can bring you some different thinking and inspiration.**
+
+---
+
+**Mokusama**  
+Designer | Artist | Creative Computing  
+Connecting creative communities and makers  
+# vvvvcommunity
