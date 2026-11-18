@@ -1,0 +1,128 @@
+> **SICP ch.2**  
+>  
+> Helping people to get the most out of their computer.  
+> *—— Mathematics /Computer Science Lead dev at Refik Anadol, vvvv Core development.*  
+> Tebjan Halm
+
+*Mokusama · 22.5566,114.0982 · 01,11,2026 · VOL.003 — VL / VVVV · CREATIVE COMPUTING*
+
+*Data Types · Levels of Abstraction · Strong Typing*
+
+# Understanding Computation: Data and Data Types
+
+**Structured Notes on Self-Study Creative Computing with vvvv gamma**
+
+Data is not a static object but a flowing material that gets processed by rules. To understand data types is to understand the raw material of computation.
+
+*Data Types. ABSTRACTION. Strong Typing.*
+
+---
+
+## 01 / DATA TYPES
+
+**Algorithms + data types + control structures.**
+
+The previous article was about computational processes and functions.
+
+Functional programming is one paradigm; data flow is another.
+
+The well-worn formulation is: algorithms + data types, or algorithms + data types + control structures.
+
+Data can serve as the most basic object of operation. Text characters, images, colors, audio, video, models—all of them familiar—are specific formats stored by means of the relevant algorithms; they simply sit at different levels of abstraction.
+
+## 02 / ABSTRACTION
+
+**In fact, there are no data types. A data type is itself a layer of abstraction.**
+
+Take a List as an example. The structure of a data type is, simply put,
+
+"an organizing method + (function 1 + function 2 + function 3... + function N)"
+
+*— an encapsulation.*
+
+In this way a single piece of data becomes a list. Abstract it one level up and organize it again, and it becomes tree-shaped data.
+
+**Single → List → Tree → Graph**
+
+In vvvv we call it **Spread**.
+
+The organizing principles of every data type follow the same pattern. A data type is, at heart, also an organization of computational processes.
+
+## 03 / TYPE SYSTEM
+
+**Basic types, generics, interfaces, and custom data types.**
+
+Data types in vvvv cover the usual basic types—Boolean, Byte, Char, single- and double-precision floats, integers, matrices, strings, vectors (2D / 3D / 4D), colors (RGBA / HSV / HSL)…
+
+Not only that: **generics and interfaces** (an advanced feature that lets one piece of logic fit different data types), file-system paths, and various communication protocols are all integrated widely and deeply.
+
+vvvv provides editing, modification, and conversion for most data types. If we treat a media data source as a layer of abstraction, then understanding these data types lets us operate on the base-class data that constitutes them—which means we can enter an abstract space with a deeper degree of control.
+
+## 04 / STRONG TYPING
+
+**Precisely managing limited computational resources.**
+
+In a strongly typed language, to save cognitive overhead and to strengthen control over memory space, the language's developers explicitly define different data types and place them in the evaluation / compilation environment as primitives of that environment. vvvv opens up this freedom: besides the basic data types, you can also define your own.
+
+The point of strong typing is to manage memory space directly. A computer—whether memory or chip—is a finite thing, and the cost and utilization of computational resources is forever a problem. What it needs is not the infinite; it needs to be managed precisely.  
+**vvvv / VL is a strongly typed visual programming language, with a fairly deep technical kinship to C#.**
+
+Through explicit data types and type constraints, strong typing makes the connections between computational units more reliable, helps developers organize, combine, and reuse computational processes in complex systems, and catches type errors earlier. That matters especially for large real-time interactive systems, complex data flows, and long-term engineering projects.
+
+## 05 / ABSTRACTION LEVELS
+
+**What tools change is the way we interact; the underlying computation does not change.**
+
+Different languages and tools offer different levels of abstraction:
+
+**Python**, as a high-level language (edited at a higher level of abstraction), lowers the barrier to expressing algorithms through dynamic typing: you usually do not need to declare variable types when writing code, so algorithms and computational processes can be expressed more directly. That has made it a widely used tool in scientific computing, data analysis, and algorithm research;
+
+**Commercial DCC software** encapsulates low-level computation as nodes, parameters, and workflows. Users no longer have to implement everything from the bottom up, but they do need to understand each package's logic and way of working;
+
+**AI** goes further still, letting users describe intent, requirements, and semantics, with AI turning that into code and computational flows.
+
+**Levels of abstraction keep rising, but the underlying computation does not change.**
+
+From programming languages to DCC software to AI, what changes is the way people interact with computational systems, and the way complexity gets encapsulated and organized. All of it still ultimately depends on data representation, logical operations, algorithms, and computational processes.
+
+Tools can hide implementation details for us, but they do not thereby remove the underlying mechanisms themselves.
+
+Understanding these mechanisms means we are no longer confined to one tool's way of working, but can build connections between different languages, software, and computational environments.
+
+## 06 / Theseus's Ship
+
+**The Ship of Theseus.**
+
+If everything is understood as a computational process, programming holds almost no secrets.
+
+If we regard an enormous computational network as a Ship of Theseus, its complexity is not located in its raw materials or its basic modules, but in the architecture built up level by level, and in the management of abstract content at different levels.
+
+> **Agent has not played a key role in building this great ship; at least for now, Agent is one of the ship's residents too.**
+
+---
+
+This is the third article in the series.
+
+As a visual live-programming language, vvvv / VL emphasizes the visibility of data, data types, and the data-flow paradigm. Data types are the basic grammar with which this language converses with a computational system; understanding them is the starting point for understanding all the complexity that follows.
+
+**Previously in this series**
+
+- [Understanding Computation: Complexity and Its Limits](https://mp.weixin.qq.com/s?__biz=MzE5MTgwNDgzMg==&mid=2247483659&idx=1&sn=d7c21c6da07fa0505b088343196933d2&scene=21#wechat_redirect)
+- [Understanding Computation: Computational Process](https://mp.weixin.qq.com/s?__biz=MzE5MTgwNDgzMg==&mid=2247483671&idx=1&sn=0db25318c948d792f487f64f124afba2&scene=21#wechat_redirect)
+
+Strong typing is not a constraint; it is the infrastructure that lets complex systems be described precisely and run reliably.
+
+**Useful links**
+
+- **Official website:** <https://vvvv.org>
+- **Official documentation (The Gray Book):** <https://thegraybook.vvvv.org>
+- **Educational institution:** [The NODE Institute](https://thenodeinstitute.org)
+- **Chinese-language website:** <https://www.nodenodenode.net>
+- **Chinese documentation:** <https://thegraybook.nodenodenode.net>
+
+---
+
+**Mokusama**  
+Designer | Artist | Creative Computing  
+Connecting creative communities and makers  
+# vvvvcommunity
