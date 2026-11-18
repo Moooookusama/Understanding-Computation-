@@ -1,0 +1,254 @@
+<section data-role="paragraph" class="_135editor">
+	<p>
+		Understanding Computation: Data and Data Types<br/><br/>
+	</p>
+</section>
+<section style="margin:0 auto;padding:18px 14px 40px;background:#d4d6d7;box-sizing:border-box;" class="">
+	<!-- Meta bar -->
+	<section style="margin:0 0 18px;padding:0;box-sizing:border-box;line-height:1.8;" class="">
+		<section style="height:1px;background:rgba(23,25,27,0.18);margin-bottom:12px;box-sizing:border-box;" class="">&nbsp;</section>
+		<p style="font-size:10px;letter-spacing:2px;color:#17191b;text-transform:uppercase;box-sizing:border-box;">
+			<br/>
+		</p>
+		<p style="font-size:10px;letter-spacing:2px;color:#17191b;text-transform:uppercase;box-sizing:border-box;">
+			<strong>SICP ch.2</strong>
+		</p>
+		<p style="font-size:10px;letter-spacing:2px;color:#17191b;text-transform:uppercase;box-sizing:border-box;">
+			<br/>
+		</p>
+		<section style="font-size: 12px; line-height: 1.95; color: #33383a; font-style: italic; text-align: justify;" class="">
+			<p>
+				<span style="font-size:12px;">Helping people to get the most out of their computer.<br/><br/></span>
+			</p>
+			<p>
+				—— Mathematics /Computer Science Lead dev at Refik Anadol, vvvv &nbsp;Core development.
+			</p>
+		</section>
+		<p style="margin: 16px 0px 22px; font-size: 10px; letter-spacing: 1.4px; color: #555b5e; text-transform: uppercase; line-height: 1.7;text-align:left;" align="left">
+			Tebjan Halm
+		</p>
+		
+		</p>
+	</section>
+	<section style="margin-bottom:0;padding:0;box-sizing:border-box;" class="">
+		<section style="height:5px;background:#17191b;margin-bottom:0;box-sizing:border-box;" class="">&nbsp;</section>
+		<section style="border-bottom:none;padding: 12px 0px; font-size: 10px; letter-spacing: 2px; text-transform: uppercase; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;box-sizing:border-box;" class="">
+			<p style="text-align:left;" align="left">
+				<span style="font-size:10px;">Mokusama<br/>22.5566,114.0982<br/>01,11,2026<br/><br/><strong><span style="letter-spacing: 2px; text-align: right; text-transform: uppercase; caret-color: #ff0000; background-color: #d4d6d7; font-size: 10px; color: #ff503d; display: inline !important;font-family:mp-quote, -apple-system-font, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif;">VOL.003 — VL / </span></strong><strong><span style="letter-spacing: 2px; text-align: right; text-transform: uppercase; caret-color: #ff0000; background-color: #d4d6d7; font-size: 10px; color: #ff503d; display: inline !important;font-family:mp-quote, -apple-system-font, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif;">VVVV</span></strong><span style="color: #333333; letter-spacing: 2px; text-align: right; text-transform: uppercase; caret-color: #ff0000; background-color: #d4d6d7; font-size: 10px; display: inline !important;font-family:mp-quote, -apple-system-font, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif;"><br/></span>CREATIVE COMPUTING</span>
+			</p>
+		</section>
+		<section style="height:1px;background:#555b5e;margin-top:0;box-sizing:border-box;" class="">&nbsp;</section>
+	</section><!-- Masthead -->
+	<section style="margin:0 0 22px;padding:32px 22px 26px;background:#17191b;color:#e8e9e6;box-sizing:border-box;line-height:1.9;" class="">
+		<section style="margin-bottom: 22px; font-size: 12px; letter-spacing: 2px; color: #dfff00; text-align: justify;" class="">
+			Data Types · Levels of Abstraction · Strong Typing
+		</section>
+		<section style="font-size: 38px; line-height: 1.16; letter-spacing: -1px; text-align: left;" class="">
+			<strong>Understanding Computation:</strong><br/><strong>Data and Data Types</strong>
+		</section>
+		<section style="margin: 14px 0px 22px; font-size: 21px; line-height: 1.4; color: #dfff00; text-align: left;" class="">
+			<strong>Structured Notes on Self-Study Creative Computing with vvvv gamma</strong>
+		</section>
+		<section style="height:4px;width:72px;background:#ff503d;margin-bottom:18px;box-sizing:border-box;" data-ignore-width class="">&nbsp;</section>
+		<section style="font-size: 14px; color: #d0d3d3; line-height: 1.7; text-align: left;" class="">
+			Data is not a static object but a flowing material that gets processed by rules.<br/>To understand data types is to understand the raw material of computation.
+		</section>
+		<section style="height:1px;background:#555;margin-top:28px;margin-bottom:10px;box-sizing:border-box;" class="">&nbsp;</section>
+		<p style="margin-top:0;padding-top:0;font-size:10px;letter-spacing:1.4px;color:#7a8084;text-transform:uppercase;box-sizing:border-box;">
+			Data Types.<br/>ABSTRACTION.&nbsp;<br/>Strong Typing.<br/>
+		</p>
+	</section><!-- HERO -->
+	<section style="margin-bottom:24px;padding:28px 22px 26px;background:#f5f5f5;color:#17191b;box-sizing:border-box;line-height:1.9;" class="">
+		<section style="font-size:11px;letter-spacing:1.5px;color:#ff503d;text-transform:uppercase;margin-bottom:12px;" class="">
+			<strong>01 / DATA TYPES</strong>
+		</section>
+		<section style="font-size:23px;line-height:1.45;margin:0 0 18px;text-align:left;" class="">
+			<strong>Algorithms + data types</strong><br/><strong>+ control structures.</strong>
+		</section>
+		<p style="font-size:15px;line-height:1.85;text-align:justify;" align="justify">
+			The previous article was about computational processes and functions.
+		</p>
+		<p style="font-size:15px;line-height:1.85;text-align:justify;" align="justify">
+			Functional programming is one paradigm; data flow is another.
+		</p>
+		<p style="font-size:15px;line-height:1.85;text-align:justify;" align="justify">
+			<br/>
+		</p>
+		<p style="font-size:15px;line-height:1.85;text-align:justify;" align="justify">
+			The well-worn formulation is: algorithms + data types, or algorithms + data types + control structures.
+		</p>
+		<p style="font-size:15px;line-height:1.85;text-align:justify;" align="justify">
+			<br/>
+		</p>
+		<p style="font-size:15px;line-height:1.85;text-align:justify;" align="justify">
+			Data can serve as the most basic object of operation. Text characters, images, colors, audio, video, models&#8212;all of them familiar&#8212;are specific formats stored by means of the relevant algorithms; they simply sit at different levels of abstraction.
+		</p>
+	</section><!-- 01 -->
+	<section style="margin-bottom:24px;padding:28px 22px 26px;background:#17191b;color:#e8e9e6;box-sizing:border-box;line-height:1.9;" class="">
+		<section style="font-size:11px;letter-spacing:1.5px;color:#dfff00;text-transform:uppercase;margin-bottom:12px;">
+			<strong>02 / ABSTRACTION&nbsp;</strong>
+		</section>
+		<p style="margin:0 0 16px;font-size:26px;line-height:1.3;color:#e8e9e6;text-align:left;" align="left">
+			<strong>In fact, there are no data types.<br/></strong><strong style="caret-color: red;">A data type is itself a layer of abstraction.</strong>
+		</p>
+		<p style="font-size:15px;line-height:1.85;color:#d0d3d3;">
+			Take a List as an example. The structure of a data type is, simply put,
+		</p>
+		<p style="font-size:15px;line-height:1.85;color:#d0d3d3;">
+			<br/>
+		</p>
+		<p style="font-size:15px;line-height:1.85;color:#d0d3d3;">
+			&quot;an organizing method + (function 1 + function 2 + function 3 ... + function N)&quot;
+		</p>
+		<p style="font-size:15px;line-height:1.85;color:#d0d3d3;">
+			<br/><span style="caret-color: red;">&#8212; an encapsulation.</span>
+		</p>
+		<p style="font-size:15px;line-height:1.85;color:#d0d3d3;">
+			In this way a single piece of data becomes a list. Abstract it one level up and organize it again, and it becomes tree-shaped data.
+		</p>
+		<p style="margin:18px 0;font-size:14px;line-height:2.05;color:#dfff00;letter-spacing:0.5px;font-family:Consolas,Monaco,monospace;">
+			<strong>Single → List → Tree → Graph</strong>
+		</p>
+		<p style="font-size:15px;line-height:1.85;color:#d0d3d3;">
+			In vvvv we call it <span style="text-decoration-line: underline; color: #ff503d;"><strong style="color: #ff503d;">Spread</strong></span>.
+		</p>
+		<p style="font-size:15px;line-height:1.85;color:#d0d3d3;">
+			The organizing principles of every data type follow the same pattern. A data type is, at heart, also an organization of computational processes.
+		</p>
+	</section><!-- 02 -->
+	<section style="margin-bottom:24px;padding:28px 22px 26px;background:#dfff00;color:#17191b;box-sizing:border-box;line-height:1.9;" class="">
+		<section style="font-size:11px;letter-spacing:1.5px;color:#17191b;text-transform:uppercase;margin-bottom:12px;" class="">
+			<strong>03 / TYPE SYSTEM&nbsp;</strong>
+		</section>
+		<section style="margin:0 0 16px;font-size:24px;line-height:1.3;text-align:left;" class="">
+			<strong>Basic types, generics, interfaces,<br/>and custom data types.</strong>
+		</section>
+		<p style="font-size:15px;line-height:1.85;text-align:justify;" align="justify">
+			Data types in vvvv cover the usual basic types&#8212;Boolean, Byte, Char, single- and double-precision floats, integers, matrices, strings, vectors (2D / 3D / 4D), colors (RGBA / HSV / HSL)&#8230;
+		</p>
+		<p style="font-size:15px;line-height:1.85;text-align:justify;" align="justify">
+			<br/>
+		</p>
+		<p style="font-size:15px;line-height:1.85;text-align:justify;" align="justify">
+			Not only that: &nbsp;<span style="color: #17191b; text-decoration-line: underline;"><strong style="color: #17191b;">generics and interfaces</strong></span><span style="color:#17191b;"><strong style="color: #17191b;"></strong></span> (an advanced feature that lets one piece of logic fit different data types), file-system paths, and various communication protocols are all integrated widely and deeply.
+		</p>
+		<p style="font-size:15px;line-height:1.85;text-align:justify;" align="justify">
+			<br/>
+		</p>
+		<p style="font-size:15px;line-height:1.85;text-align:justify;" align="justify">
+			vvvv provides editing, modification, and conversion for most data types. If we treat a media data source as a layer of abstraction, then understanding these data types lets us operate on the base-class data that constitutes them&#8212;which means we can enter an abstract space with a deeper degree of control.
+		</p>
+	</section><!-- 03 -->
+	<section style="margin-bottom:24px;padding:28px 22px 26px;background:#17191b;color:#e8e9e6;box-sizing:border-box;line-height:1.9;" class="">
+		<section style="font-size:11px;letter-spacing:1.5px;color:#ff503d;text-transform:uppercase;margin-bottom:12px;" class="">
+			<strong style="color:#dfff00;">04 / STRONG TYPING&nbsp;</strong>
+		</section>
+		<p style="margin:0 0 16px;font-size:24px;line-height:1.3;color:#e8e9e6;text-align:left;" align="left">
+			<strong>Precisely managing limited computational resources.</strong>
+		</p>
+		<p style="font-size:15px;line-height:1.85;color:#d0d3d3;text-align:justify;" align="justify">
+			In a strongly typed language, to save cognitive overhead and to strengthen control over memory space, the language's developers explicitly define different data types and place them in the evaluation / compilation environment as primitives of that environment. vvvv opens up this freedom: besides the basic data types, you can also define your own.<br/><br/>
+		</p>
+		<p style="font-size:15px;line-height:1.85;color:#d0d3d3;text-align:justify;" align="justify">
+			The point of strong typing is to manage memory space directly. A computer&#8212;whether memory or chip&#8212;is a finite thing, and the cost and utilization of computational resources is forever a problem. What it needs is not the infinite; it needs to be managed precisely.<br/><strong style="color: #e8e9e6; font-size: 18px; caret-color: red;"><br/>vvvv / VL is a strongly typed visual programming language, </strong><strong style="color: #e8e9e6; font-size: 18px; caret-color: red;">with a fairly deep technical kinship to C#.</strong>
+		</p>
+		<p style="font-size:15px;line-height:1.85;color:#d0d3d3;text-align:justify;" align="justify">
+			<br/>Through explicit data types and type constraints, strong typing makes the connections between computational units more reliable, helps developers organize, combine, and reuse computational processes in complex systems, and catches type errors earlier. That matters especially for large real-time interactive systems, complex data flows, and long-term engineering projects.
+		</p>
+	</section><!-- 04 -->
+	<section style="margin-bottom:24px;padding:28px 22px 26px;background:#f5f5f5;color:#17191b;box-sizing:border-box;line-height:1.9;" class="">
+		<section style="font-size:11px;letter-spacing:1.5px;color:#ff503d;text-transform:uppercase;margin-bottom:12px;" class="">
+			<strong style="color: #ff503d;">05 / ABSTRACTION LEVELS&nbsp;</strong>
+		</section>
+		<section style="margin:0 0 16px;font-size:25px;line-height:1.3;text-align:left;color:#333333;" class="">
+			<strong>What tools change is the way we interact;</strong><br/><strong>the underlying computation does not change.</strong>
+		</section>
+		<p style="font-size:15px;line-height:1.85;color:#333333;text-align:justify;" align="justify">
+			Different languages and tools offer different levels of abstraction:
+		</p>
+		<p style="font-size:15px;line-height:1.85;color:#333333;text-align:justify;" align="justify">
+			<strong style="color:#ff503d;">Python</strong>, as a high-level language (edited at a higher level of abstraction), lowers the barrier to expressing algorithms through dynamic typing: you usually do not need to declare variable types when writing code, so algorithms and computational processes can be expressed more directly. That has made it a widely used tool in scientific computing, data analysis, and algorithm research;<br/><br/>
+		</p>
+		<p style="font-size:15px;line-height:1.85;color:#333333;text-align:justify;" align="justify">
+			<strong style="color:#ff503d;">Commercial DCC software&nbsp;</strong>encapsulates low-level computation as nodes, parameters, and workflows. Users no longer have to implement everything from the bottom up, but they do need to understand each package's logic and way of working;<br/><br/>
+		</p>
+		<p style="font-size:15px;line-height:1.85;color:#333333;text-align:justify;" align="justify">
+			<strong style="color:#ff503d;">AI</strong>&nbsp;goes further still, letting users describe intent, requirements, and semantics, with AI turning that into code and computational flows.<br/><br/><strong style="font-size: 18px; caret-color: red;">Levels of abstraction keep rising,<br/></strong><strong style="font-size: 18px; caret-color: red;">but the underlying computation does not change.</strong>
+		</p>
+		<p style="font-size:15px;line-height:1.85;color:#333333;text-align:justify;" align="justify">
+			<br/>From programming languages to DCC software to AI, what changes is the way people interact with computational systems, and the way complexity gets encapsulated and organized. All of it still ultimately depends on data representation, logical operations, algorithms, and computational processes.
+		</p>
+		<p style="font-size:15px;line-height:1.85;color:#333333;text-align:justify;" align="justify">
+			Tools can hide implementation details for us, but they do not thereby remove the underlying mechanisms themselves.
+		</p>
+		<p style="font-size:15px;line-height:1.85;color:#333333;text-align:justify;" align="justify">
+			Understanding these mechanisms means we are no longer confined to one tool's way of working, but can build connections between different languages, software, and computational environments.
+		</p>
+	</section><!-- 05 -->
+	<section style="margin-bottom:24px;padding:28px 22px 26px;background:#ff503d;color:#17191b;box-sizing:border-box;line-height:1.9;" class="">
+		<section style="font-size:11px;letter-spacing:1.5px;color:#17191b;text-transform:uppercase;margin-bottom:12px;" class="">
+			<strong>06 /&nbsp;</strong>Theseus's Ship
+		</section>
+		<section style="margin:0 0 16px;font-size:25px;line-height:1.3;text-align:left;" class="">
+			<strong>The Ship of Theseus.</strong>
+		</section>
+		<p style="font-size:15px;line-height:1.85;text-align:justify;" align="justify">
+			If everything is understood as a computational process, programming holds almost no secrets.
+		</p>
+		<p style="font-size:15px;line-height:1.85;text-align:justify;" align="justify">
+			If we regard an enormous computational network as a Ship of Theseus, its complexity is not located in its raw materials or its basic modules, but in the architecture built up level by level, and in the management of abstract content at different levels.
+		</p>
+		<section style="margin-top:18px;font-size:18px;line-height:1.7;" class="">
+			<strong>Agent has not played a key role in building this great ship;</strong><br/><strong>at least for now, Agent is one of the ship's residents too.</strong>
+		</section>
+	</section><!-- 06 -->
+	<section class="">
+		<section style="height:1px;background:#c2c4c5;margin-top:22px;margin-bottom:14px;box-sizing:border-box;" class="">&nbsp;</section>
+		<p style="font-size:15px;margin:0;">This is the third article in the series.</p>
+		<p style="font-size:15px;line-height:1.85;margin:0 0 16px;color:#333333;text-align:justify;" align="justify">
+			As a visual live-programming language, vvvv / VL emphasizes the visibility of data, data types, and the data-flow paradigm. Data types are the basic grammar with which this language converses with a computational system; understanding them is the starting point for understanding all the complexity that follows.<br/><br/>
+		</p>
+		<p style="font-size:15px;line-height:1.85;margin:0 0 16px;color:#333333;text-align:justify;" align="justify">
+			<a href="https://mp.weixin.qq.com/s?__biz=MzE5MTgwNDgzMg==&amp;mid=2247483659&amp;idx=1&amp;sn=d7c21c6da07fa0505b088343196933d2&amp;scene=21#wechat_redirect" style="color:#333333;text-decoration:underline;">Understanding Computation: Complexity and Its Limits</a>
+		</p>
+		<p style="font-size:15px;line-height:1.85;margin:0 0 16px;color:#333333;text-align:justify;" align="justify">
+			<a href="https://mp.weixin.qq.com/s?__biz=MzE5MTgwNDgzMg==&amp;mid=2247483671&amp;idx=1&amp;sn=0db25318c948d792f487f64f124afba2&amp;scene=21#wechat_redirect" style="color:#333333;text-decoration:underline;">Understanding Computation: Computational Process</a>
+		</p>
+	</section>
+	<section style="margin:18px 0;padding:20px 18px;background:#1a1d1f;color:#e8e9e6;box-sizing:border-box;font-size:16px;line-height:1.85;text-align:justify;" align="justify" class="">
+		<strong>Strong typing is not a constraint; it is the infrastructure that lets complex systems be described precisely and run reliably.</strong>
+	</section>
+	<section style="margin:0 0 14px;text-align:justify;" align="justify" class="">
+
+		
+		</section>
+		<section style="height:1px;background:#c2c4c5;margin-top:22px;margin-bottom:14px;box-sizing:border-box;" class="">&nbsp;</section>
+		<p style="font-size: 11px; margin-top: 0; line-height: 1.7; box-sizing:border-box;text-align:left;" align="left">
+			<span style="color: #555b5e;"><br/>Useful links:<br/><br/></span><strong style="color: #17191b;"></strong><span style="caret-color: red; text-decoration-line: underline; color: #555b5e; font-size: 12px;"><strong style="text-decoration-line: underline; color: #17191b;">Official website:</strong><strong style="text-decoration-line: underline; color: #17191b;"><a href="https://vvvv.org/" _src="https://vvvv.org/" style="text-decoration-line: underline; color: #17191b; font-size: 12px;">https://vvvv.org</a></strong></span><span style="font-size:12px;"><span style="caret-color: red; color: #555b5e; font-size: 12px;"><br/> </span><span style="caret-color: red; text-decoration-line: none; font-size: 12px;"><strong style="color: #17191b; text-decoration-line: underline; caret-color: red;">Official documentation (The Gray Book):</strong><strong style="color: #17191b; text-decoration-line: underline; caret-color: red;"><a href="https://thegraybook.vvvv.org/" style="color: #17191b; caret-color: red; text-decoration-line: none; font-size: 12px;">The Gray Book</a></strong></span><span style="color: #555b5e; caret-color: red; text-decoration-line: none; font-size: 12px;">&nbsp;<br/></span><strong style="color: #17191b; caret-color: red; text-decoration-line: underline;">Educational institution:</strong><strong style="color: #17191b; caret-color: red; text-decoration-line: underline;"><a href="https://thenodeinstitute.org/" style="color: #17191b; caret-color: red; text-decoration-line: underline; font-size: 12px;">The NODE Institute</a></strong><span style="color: #555b5e; caret-color: red; font-size: 12px;">&nbsp;<br/></span><span style="caret-color: red; color: #17191b; text-decoration-line: underline; font-size: 12px;"><strong>Chinese-language website:</strong><strong><a href="https://www.nodenodenode.net" _src="https://www.nodenodenode.net" style="color: #17191b; text-decoration-line: underline; font-size: 12px;">https://www.nodenodenode.net</a></strong></span><span style="caret-color: red; text-decoration-line: underline; color: #17191b; font-size: 12px;"><strong><span style="color: #17191b; caret-color: red; text-decoration-line: underline; font-size: 12px;"><br/></span>Chinese documentation: https://thegraybook.nodenodenode.net/&nbsp;</strong></span></span><a href="https://www.nodenodenode.net" style="color: #17191b; font-size: 12px;"></a>
+		</p>
+		<section style="height:1px;background:#c2c4c5;margin-top:22px;margin-bottom:0;box-sizing:border-box;" class="">&nbsp;</section>
+		<section style="font-size: 11px; margin-top: 0; line-height: 1.7; box-sizing:border-box;text-align:left;" align="left" class="">
+			<br/>
+			<section style="display: flex; align-items: flex-start; gap: 12px; padding: 18px 0px 6px; width: 100%; flex: 0 0 100%;max-width:100% !important;box-sizing:border-box;" class="" data-width="100%">
+				<section style="width:3px;height:100%;min-height:110px;background:#ff503d;flex-shrink:0;box-sizing:border-box;" class="" data-ignore-width></section>
+				<section style="font-size:12px;line-height:1.9;color:#17191b;box-sizing:border-box;" class="">
+					<section style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#555b5e;margin-bottom:4px;box-sizing:border-box;" class="">
+						Author
+					</section>
+					<section style="font-size:18px;letter-spacing:0.5px;box-sizing:border-box;" class="">
+						<strong>Mokusama</strong>
+					</section>
+					<section style="margin-top:6px;box-sizing:border-box;" class="">
+						Designer | Artist | Creative Computing
+					</section>
+					<section style="margin-top:6px;color:#555b5e;box-sizing:border-box;" class="">
+						Connecting creative communities and makers
+					</section>
+					<section style="margin-top: 8px; font-size: 11px; letter-spacing: 1.4px; color: #ff503d; text-transform: uppercase; box-sizing: border-box;" class="">
+						<strong># vvvvcommunity</strong>
+					</section>
+				</section>
+			</section>
+		</section>
+	</section>
+</section>

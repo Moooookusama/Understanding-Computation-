@@ -1,0 +1,337 @@
+<section data-role="paragraph" class="_135editor">
+	<p>
+		Understanding Computation: Time, State, Stream, Object<br/><br/>
+	</p>
+</section>
+<section style="margin:0 auto;padding:18px 14px 40px;background:#d4d6d7;box-sizing:border-box" class="">
+	<!-- Meta bar -->
+	<section style="margin:0 0 18px;padding:0;box-sizing:border-box;line-height:1.8" class="">
+		<section style="height:1px;background:rgba(23,25,27,0.18);margin-bottom:12px;box-sizing:border-box" class="">
+			&nbsp;
+		</section>
+		<p style="font-size:10px;letter-spacing:2px;color:#17191b;text-transform:uppercase;box-sizing:border-box">
+			<br/>
+		</p>
+		<p style="font-size:10px;letter-spacing:2px;color:#17191b;text-transform:uppercase;box-sizing:border-box">
+			<strong>SICP CH.3</strong>
+		</p>
+		<p style="font-size:10px;letter-spacing:2px;color:#17191b;text-transform:uppercase;box-sizing:border-box">
+			<br/>
+		</p>
+		<section style="font-size: 12px;line-height: 1.95;color: #33383a;text-align: justify" class="">
+			<p style="font-size:12px;line-height:1.95;color:#33383a;text-align:justify;" data-u="0" align="justify">
+				<em>Μεταβάλλον ἀναπαύεται</em><br/><em>Even while it changes, it stands still.</em><br/><span style="text-transform:uppercase">— Heraclitus</span>
+			</p>
+			<p style="font-size:12px;line-height:1.95;color:#33383a;text-align:justify;" data-u="0" align="justify">
+				<br/>
+			</p>
+			<p style="font-size:12px;line-height:1.95;color:#33383a;text-align:justify;" data-u="1" align="justify">
+				<em>Plus ça change, plus c&#39;est la même chose.</em><br/><em>The more it changes, the more it stays itself.</em><br/><span style="text-transform:uppercase">— Alphonse Karr</span>
+			</p>
+		</section>
+		<p style="margin-top:8px;font-size:10px;letter-spacing:1.4px;color:#555b5e;text-transform:uppercase;box-sizing:border-box">
+			<br/>
+		</p>
+	</section>
+	<section style="margin-bottom:0;padding:0;box-sizing:border-box" class="">
+		<section style="height:5px;background:#17191b;margin-bottom:0;box-sizing:border-box" class="">
+			&nbsp;
+		</section>
+		<section style="border-bottom:none;padding: 12px 0px;font-size: 10px;letter-spacing: 2px;text-transform: uppercase;display: flex;justify-content: space-between;align-items: center;flex-wrap: wrap;box-sizing:border-box" class="">
+			<p style="text-align:left;" align="left">
+				<span style="font-size:10px">Mokusama<br/>22.5566,114.0982<br/>07,11,2026<br/><br/><span style="font-size: 10px; color: #ff503d;"><strong><span style="letter-spacing: 2px; text-align: right; text-transform: uppercase; caret-color: #ff0000; background-color: #d4d6d7; font-size: 10px; display: inline !important;">VOL.004 — VL / </span></strong><strong><span style="letter-spacing: 2px; text-align: right; text-transform: uppercase; caret-color: #ff0000; background-color: #d4d6d7; font-size: 10px; display: inline !important;">VVVV</span></strong></span><span style="letter-spacing: 2px;text-align: right;text-transform: uppercase;caret-color: #ff0000;background-color: #d4d6d7;font-size: 10px;display: inline !important;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif"><br/></span>CREATIVE COMPUTING</span>
+			</p>
+		</section>
+		<section style="height:1px;background:#555b5e;margin-top:0;box-sizing:border-box" class="">
+			&nbsp;
+		</section>
+	</section><!-- Masthead -->
+	<section style="margin:0 0 22px;padding:32px 22px 26px;background:#17191b;color:#e8e9e6;box-sizing:border-box;line-height:1.9" class="">
+		<section style="margin-bottom: 22px;font-size: 12px;letter-spacing: 2px;color: #dfff00;text-align: justify" class="">
+			Time · State · Stream · Object
+		</section>
+		<section style="font-size: 38px;line-height: 1.16;letter-spacing: -1px;text-align: left" class="">
+			<strong>Understanding Computation:</strong><br/><strong>Time, State,</strong><br/><strong>Stream, Object</strong>
+		</section>
+		<section style="margin: 14px 0px 22px;font-size: 21px;line-height: 1.4;color: #dfff00;text-align: left" class="">
+			<strong>Structured Notes on Self-Study Creative Computing with vvvv gamma</strong>
+		</section>
+		<section style="height:4px;width:72px;background:#ff503d;margin-bottom:18px;box-sizing:border-box;" data-ignore-width class="">
+			&nbsp;
+		</section>
+		<section style="font-size: 14px;color: #d0d3d3;line-height: 1.7;text-align: left" class="">
+			A purely conceptual function has no friction; reality, though, hands time back to us.<br/>To understand state and stream is to understand how change gets arranged.
+		</section>
+		<section style="height:1px;background:#555;margin-top:28px;margin-bottom:10px;box-sizing:border-box" class="">
+			&nbsp;
+		</section>
+		<p style="margin-top:0;padding-top:0;font-size:10px;letter-spacing:1.4px;color:#7a8084;text-transform:uppercase;box-sizing:border-box">
+			TIME.<br/>STATE.<br/>STREAM.<br/>OBJECT.<br/>
+		</p>
+	</section><!-- HERO -->
+	<section style="margin-bottom:24px;padding:28px 22px 26px;background:#ffffff;color:#17191b;box-sizing:border-box;line-height:1.9" class="">
+		<section style="font-size:11px;letter-spacing:1.5px;color:#ff503d;text-transform:uppercase;margin-bottom:12px" class="">
+			<strong>01 / TIME &amp; STATE&nbsp;</strong>
+		</section>
+		<section style="margin:0 0 16px;font-size:26px;line-height:1.35;text-align:left;color:#17191b" class="">
+			<strong>An ideal, static way of knowing.<br/>Until reality hands time back.</strong>
+		</section>
+		<p style="font-size:15px;line-height:1.85;color:#333333;text-align:justify;" data-u="2" align="justify">
+			If we abstract the problem we need to solve into something a programming language can describe, and then let the computer compute it &#8212;<br/>then <span style="color:#ff503d;"><strong>process abstraction</strong></span> and <span style="color:#ff503d;"><strong>data abstraction</strong></span> should in theory already be able to do all the work.<br/>And elegant&nbsp;<span style="color:#ff503d;"><strong>pure functional programming&nbsp;</strong></span>is the embodiment of that idea; it even wants to dispense with &quot;state&quot; altogether.<br/>This is an ideal, static way of knowing. It fits very well with how humans imagine conceptual things.<br/>But once these things start to compute, the limits of reality appear, for example:<br/><br/>
+		</p>
+		<p style="font-size: 19px; line-height: 1.85; color: #333333;text-align:justify;" data-u="2" align="justify">
+			<span style="color: #ff503d; font-size: 19px;"><strong>Time<br/><br/></strong></span>
+		</p>
+		<p style="font-size:15px;line-height:1.85;color:#333333;text-align:justify;" data-u="3" align="justify">
+			Humans hold an overall sense of time as &quot;<span style="color:#ff503d;"><strong>everything flowing, everything changing</strong></span>&quot;<br/>A computer has no such feeling; it only computes <strong>step by step</strong>, one step after another, in order<br/>But the physical world is finite. Things must happen step by step; they cannot all be computed in one instant.<br/>So &quot;flow&quot; gets broken into &quot;<strong>step by step</strong>&quot;, and the result of one step has to be handed to the next. This thing that is passed between steps and remembered, we call <span style="color:#ff503d;"><strong>State</strong></span>&nbsp;.
+		</p>
+		<p style="font-size:15px;line-height:1.85;color:#333333;text-align:justify;" data-u="3" align="justify">
+			<br/>
+		</p>
+		<p style="font-size:15px;line-height:1.85;color:#333333;text-align:justify;" data-u="4" align="justify">
+			When a thing's interior changes with use, and its behavior depends on that change, it is a&nbsp;<span style="color:#ff503d;"><strong>stateful</strong></span><strong>&nbsp;</strong>object. Pure functional programming, by contrast, treats state as an ordinary value, passing it in and out in plain sight, and keeps itself clean that way.
+		</p>
+	</section><!-- 01 -->
+	<section style="margin-bottom:24px;padding:28px 22px 26px;background:rgb(23,25,27);color:#e8e9e6;box-sizing:border-box;line-height:1.9" class="">
+		<section style="font-size:11px;letter-spacing:1.5px;color:#dfff00;text-transform:uppercase;margin-bottom:12px" class="">
+			<span style="color:#ff503d;"><strong>02 / FRAME</strong></span><strong>&nbsp;</strong>
+		</section>
+		<section style="margin:0 0 16px;font-size:26px;line-height:1.35;text-align:left;color:#e8e9e6" class="">
+			<span style="color: #ff503d;"><strong>Once state becomes visible,<br/>everything starts to change.</strong></span>
+		</section>
+		<p style="font-size:15px;line-height:1.85;color:#d0d3d3;text-align:justify;" data-u="5" align="justify">
+			A single change in data splits state into original data / current data, and the slice of state on either side of the change is called a <span style="color: #ff503d;"><strong>Frame</strong></span>.
+		</p>
+		<p style="font-size:15px;line-height:1.85;color:#d0d3d3;text-align:justify;" data-u="5" align="justify">
+			<br/>
+		</p>
+		<p style="font-size:15px;line-height:1.85;color:#d0d3d3;text-align:justify;" data-u="6" align="justify">
+			<strong>vvvv</strong> sorts nodes into two kinds: <span style="color: #ff503d;"><strong>stateful</strong> / <strong>stateless</strong></span>.
+		</p>
+		<p style="font-size:15px;line-height:1.85;color:#d0d3d3;text-align:justify;" data-u="6" align="justify">
+			<br/>On the left, a stateless node; on the right, the ones with <span style="color:#ff503d;"><strong>grey double lines</strong></span> are <strong><span style="color:#ff503d;">stateful nodes</span></strong>. That means it is a function whose <span style="color:#c6c6c7;">interior</span> changes and passes those changes along.
+		</p>
+		<p style="font-size:15px;line-height:1.85;margin:16px 0;text-align:center;" align="center">
+			<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA1YAAAGoCAIAAADKOeN8AAAXHklEQVR42u3de2xV9QHA8d+9eG9fl9ZbaKG0jFYe5SEVCqO6LBgYDBYZPqKbBp2TZTAStwQ06lyWxS1bXIwjk2QEk2VGtiXLxDldfETUzEEmOBEYjMfkIa8ipZRHKaWlt/vjxJuuRdZNnVA/n7/qvb+We89tr997zvn9TmzgwIEBAIBPk7hNAAAgAQEAkIAAAEhAAAAkIAAAEhAAAAkIAIAEBABAAgIAIAEBAJCAAABIQAAAJCAAABIQAAAJCACABAQAkIAAAEhAAAAkIAAAEhAAAAkIAIAEBABAAgIAIAEBAJCAAABIQAAAJCAAABIQAAAJCACABAQAQAICAEhAAAAkIAAAEhAAAAkIAIAEBABAAgIAIAEBAJCAAABIQAAAJCAAABIQAAAJCACABAQAQAICACABAQAkIAAAEhAAAAkIAIAEBABAAgIAIAEBAJCAAABIQAAAJCAAABIQAAAJCACABAQAQAICACABAQCQgAAAEhAAAAkIAIAEBABAAgIAIAEBAJCAAABIQAAAJCAAABIQAAAJCACABAQAQAICACABAQCQgAAASEAAAAkIAIAEBABAAgIAIAEBAJCAAABIQAAAJCAAABIQAAAJCACABAQAQAICACABAQCQgAAASEAAACQgAAASEABAAgIAIAEBAJCAAABIQAAAJCAAABIQAAAJCACABAQAQAICACABAQCQgAAASEAAACQgAAASEAAACQgAIAEBAJCAAABIQAAAJCAAABIQAAAJCACABAQAQAICACABAQCQgAAASEAAACQgAAASEAAACQgAgAQEAJCAAABIQAAAJCAAABIQAAAJCACABAQAQAICACABAQCQgAAASEAAACQgAAASEAAACQgAgAQEAEACAgBIQAAAJCAAABIQAAAJCACABAQAQAICACABAQCQgAAASEAAACQgAAASEAAACQgAgAQEAEACAgAgAQEAJCAAABIQAAAJCACABAQAQAICACABAQCQgAAASEAAACQgAAASEAAACQgAgAQEAEACAgAgAQEAkIAAABIQAAAJCACABAQAQAICACABAQCQgAAASEAAACQgAAASEAAACQgAgAQEAEACAgAgAQEAkIAAAEhAAADCZTbBRyI3N7f3g9va2myxviSTydgIcLEpKCj4r8Zfiu/MyWTyU/K/nv/qmYYQTp8+7U9AAv6fXHvttdXV1b3Mheeee84W6zPq6+s1PVyExo4de8011/Ry8JYtW5qbmy+55zhq1Kji4uJe9t+GDRsu6QSsra3t5eCtW7e+8sor/gSCA8EAAEhAAAAJCADQV8RiMRtBAgIAIAEBAJCAAAASEACAYF1AeuvQoUM2AsDFo6GhIfR62eTW1tZL7gl2dHT0/jleik8wq7Ozs/fPlF6KDRw40Fb48NLpdGFhoe0QLA0NXBzy8/NLSkpsh0+hpqamkydP2g7BgWAAACQgAIAEBABAAgIAIAEBAAgWheFjV1lZOW/evOHDh+fn58disfb29lOnTm3ZsuXll1/euXNndlhNTc3ixYvz8/P37t17//33/x8e2JIlS+rq6trb23/7298+//zz5703hLBu3bqf/exn3e4dM2bMkiVL+vfv//zzzz/55JNeZeBScd99902aNCmE8Kc//WnlypUXGJl9W/6gAS0tLUuXLt28eXO326dOnTpjxozy8vL8/Px4PJ7JZFpaWg4ePLh69erXX3/dS4AE/FS47rrrvvKVr+Tm5mZvSSQSxcXFU6dOHTNmzMMPP3zgwIFP6rHt2bNn8uTJiUTiiiuu6HZXPB4fNGhQ9HV5eXkqlWpubu46YPTo0QUFBWfPnv3nP//pVQbIfuZftGjRsGHDYrFY13fUVCpVXV09atSo6667bvny5Xv37rWtkIB9WV1d3U033ZSbm9ve3r5mzZpVq1Y1NDQMHz588uTJNTU1XbvwE/HOO++cOXMmlUpVVFREn1Ozd1VXVxcXF0dfFxYWDh06dNu2bV2/d+TIkf369Tty5Mg777zjhQZCX1+Yujef2GtraxcsWJBOpzs7O48cOfLqq6+uWbOmoaGhpKTk85///PTp00tKSiorKx944IHHH398w4YNNiwSsM+69tprU6lUJpNZvXr1E088Ed24a9euXbt2/e53v+s2ePPmzXfddVf4/+4FPH78eCqVGjBgQHV1ddfIGzp0aF5eXvR1Xl5etwQsKSkZMmRICOHQoUMWeQeI3hjvuOOOqP82bNjw2GOPZa/h0dDQ8Ic//OGFF174zne+U1tbm06n77jjjv3793v/JJgO0lcNGDAghNDa2npxftprbm7es2dPFHlVVVVd7xoyZEgikWhvb89kMolEorKysuu9I0aMSKfTHR0djgIDRG666aaysrIQwt69e1esWNHzGm6tra0rVqyIDgGXlZXddNNNNhoSsI9LJpPdEuricfDgwY6Ojp6nA0b/uX379rNnz4YQKioqwr8fBc7JyTl9+vT27du9vgBVVVUTJkyIxWJtbW0vv/zyiRMnzjvsxIkTL7/8cltbWywWmzBhQrfP3hAcCO4zGhsbKysrL7vsslmzZu3du7fnrLFwvqln3WYEd7u9pqbmxhtvHDFiRDKZjPbD/epXvzrvmcWTJk264YYbKisrk8lkJpNpampavXr1M8880/Wcv+3bt58+fTo62y97OmBZWVm0k2/Xrl2DBg3Ky8tLp9NlZWX19fXh/b2AsVissbFxx44d2R81fvz4qVOnjh49Op1OJxKJEEJ7e/u+fftWrVr11ltvRWOuvvrqb33rW3l5eZs2bfrJT37S8zHfdtttc+fOPXfu3BNPPPHKK69EN+bm5t522211dXVFRUXxeLy1tXXXrl1PPvmk86mBi8SYMWP69+8fve1f+K1+8+bNjY2NZWVl/fv3HzNmTHQoBoK9gH3M6tWrT506FUIYOHDg4sWLb7755nj8Q71MN9988z333DN27NhkMhlC6Nev3+jRo++5556eHyXnzZu3ePHiUaNGRSPj8fiAAQNuueWWxYsXd30M+/fvj67AXVxcXF1dHd0YvTe1trZu3779vffeCyEUFhZmd2SOGDGitLQ0hLB79+5sTVZUVCxcuHDq1KmlpaVR/4UQEonE8OHD77777muuuSa6ZcuWLUeOHIk+MY8ZM6bbY06lUhMnTozH4/X19evWrct+tv7xj388e/bsdDodPfLc3Nxx48Y9+OCD0Zo1AJ+4ioqK6K2vvr7+wmf4NTQ0RB+nE4lEtwMsIAH7jg0bNvz+979vaWkJIeTn5998880///nPp02bFv7Xc42vv/76c+fOPfPMMwsWLLj77rv//ve/R7d/4QtfCP++Es3s2bMTicShQ4eWLl361a9+9fvf//7evXvj8fjEiRNnz54depwOWFBQMHr06NDlOO/JkycPHDgQzYBLJpOf+cxnontHjRqVSqV6Lgdz8uTJv/3tb8uWLVuwYEH0L0aThfPz87NPubm5+e23385kMqlUasKECaHHBOqysrJMJvP2229Ha9AUFRV985vfrKioaG9vf/XVVxcsWHDnnXc+++yzbW1t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JCAAABIQAAAJCACABAQAQAICACABAQCQgAAAEhAAAAkIAIAEBABAAgIAIAEBAJCAAABIQAAAJCAAABIQAAAJCACABAQAQAICACABAQCQgAAASEAAAAkIAIAEBABAAgIAIAEBAJCAAABIQAAAJCAAABIQAAAJCACABAQAQAICACABAQCQgAAASEAAACQgAIAEBABAAgIAIAEBAJCAAABIQAAAJCAAABIQAAAJCACABAQAQAICACABAQCQgAAASEAAACQgAAASEABAAtoEAAASEAAACQgAgAQEAEACAgAgAQEAkIAAAEhAAAAkIAAAEhAAAAkIAIAEBABAAgIAIAEBAJCAAABIQAAACQgAgAQEAEACAgAgAQEAkIAAAEhAAAAkIAAAEhAAAAkIAIAEBABAAgIAIAEBAJCAAABIQAAAJCAAgAQEAEACAgAgAQEAkIAAAEhAAAAkIAAAEhAAAAkIAIAEBABAAgIAIAEBAJCAAABIQAAAJCAAABIQAEACAgAgAQEAkIAAAEhAAAAkIAAAEhAAAAkIAIAEBABAAgIAIAEBAJCAAABIQAAAJCAAABIQAAAJCAAgAQEAkIAAAEhAAAAkIAAAEhAAAAkIAIAEBABAAgIAIAEBAJCAAABIQAAAJCAAABIQAAAJCACABAQAkIAAAEhAAAAkIAAAEhAAAAkIAIAEBABAAgIAIAEBAJCAAABIQAAAJCAAABIQAAAJCACABAQAQAICAPAvRFP9a6PkoIQAAAAASUVORK5CYII=" style="vertical-align: baseline; width: 100%;box-sizing:border-box;max-width:100% !important;" alt="stateless and stateful nodes in vvvv" data-ratio="0.4964871194379391" data-w="854"/>
+		</p>
+		<p style="font-size:15px;line-height:1.85;color:#d0d3d3;text-align:justify;" data-u="7" align="justify">
+			State, or the introduction of time, adds a new dimension to the complexity of deeply nested, interconnected function frameworks; everything begins to change.
+		</p>
+		<p style="font-size:15px;line-height:1.85;color:#d0d3d3;text-align:justify;" data-u="7" align="justify">
+			<br/>
+		</p>
+		<p style="font-size:15px;line-height:1.85;color:#d0d3d3;text-align:justify;" data-u="8" align="justify">
+			In text-based programming, state is encapsulated inside objects and managed through local or global calls; the process of change is almost invisible.
+		</p>
+		<p style="font-size:15px;line-height:1.85;color:#d0d3d3;text-align:justify;" data-u="8" align="justify">
+			<br/>While <strong>vvvv</strong>, through&nbsp;<span style="color:#ff503d;"><strong>Data Flow</strong></span>, lays the change and transfer of state out completely and explicitly, so that the granularity of every data change is visible to the naked eye.
+		</p>
+		<p style="font-size:15px;line-height:1.85;color:#d0d3d3;text-align:justify;" data-u="8" align="justify">
+			<br/>
+		</p>
+		<p style="font-size:15px;line-height:1.85;color:#d0d3d3;text-align:justify;" data-u="9" align="justify">
+			In <strong>vvvv</strong>'s runtime<strong><span style="font-size: 12px;">&nbsp;<span style="color: #ff503d;">(vvvv keeps the runtime on by default, at all times)</span></span></strong>, the <span style="color:#ff503d;"><strong draggable="true">global frame</strong></span><strong>&nbsp;</strong>stays on at all times, so state updates inside every <strong>P</strong><strong>rocess</strong> node are compiled into the process automatically.
+		</p>
+	</section><!-- 02 -->
+	<section style="margin-bottom:24px;padding:28px 22px 26px;background:#dfff00;color:#17191b;box-sizing:border-box;line-height:1.9" class="">
+		<section style="font-size:11px;letter-spacing:1.5px;color:#17191b;text-transform:uppercase;margin-bottom:12px" class="">
+			<strong>03 / CHANGE PROPAGATION&nbsp;</strong>
+		</section>
+		<section style="margin:0 0 16px;font-size:26px;line-height:1.35;text-align:left;color:#17191b" class="">
+			<strong>Change is not one-directional;<br/>it has to be constrained.</strong>
+		</section>
+		<p style="font-size:15px;line-height:1.85;color:#17191b;text-align:justify;" data-u="10" align="justify">
+			Inside and outside a function, and between one function and another, the relationship of data and of&nbsp;<strong>propagation of change&nbsp;</strong> is not one-directional. Complexity can unfold in many directions, in many frequencies, and then some unavoidable problems appear: <strong>concurrency</strong> <strong>race conditions</strong> <strong>deadlock</strong> ...<br/>What then has to be thought about is:
+		</p>
+		<p style="font-size:15px;line-height:1.85;color:#17191b;text-align:justify;" data-u="11" align="justify">
+			How to effectively constrain this&nbsp;<strong>propagation of change&nbsp;</strong>
+		</p>
+		<p style="font-size:15px;line-height:1.85;color:#17191b;text-align:justify;" data-u="12" align="justify">
+			Two ways of controlling&nbsp;<strong>propagation of change&nbsp;</strong> emerge here:
+		</p>
+		<p style="font-size:15px;line-height:1.85;color:#17191b;text-align:justify;" data-u="12" align="justify">
+			<br/><span style="font-size:19px;"><strong>Object-based</strong> / <strong>Stream-based</strong></span>
+		</p>
+		<p style="font-size:15px;line-height:1.85;color:#17191b;text-align:justify;" data-u="12" align="justify">
+			<br/>
+		</p>
+		<p style="font-size:15px;line-height:1.85;color:#17191b;text-align:justify;" data-u="13" align="justify">
+			<strong>Object-based&nbsp;</strong>means designing a module's internal rules of change in advance, and designing the time function itself.<br/><strong>Stream-based&nbsp;</strong>is another paradigm: seeing time as an infinitely extending sequence.
+		</p>
+	</section><!-- 03 -->
+	<section style="margin-bottom:24px;padding:28px 22px 26px;background:#ffffff;color:#17191b;box-sizing:border-box;line-height:1.9" class="">
+		<section style="font-size:11px;letter-spacing:1.5px;color:#ff503d;text-transform:uppercase;margin-bottom:12px" class="">
+			<strong>03 / STREAM &amp; VVVV&nbsp;</strong>
+		</section>
+		<section style="margin:0 0 16px;font-size:26px;line-height:1.35;text-align:left;color:#17191b" class="">
+			<strong>Seeing time as<br/>an infinitely extending sequence.</strong>
+		</section>
+		<p style="font-size:15px;line-height:1.85;color:#333333;text-align:justify;" data-u="14" align="justify">
+			As a visual programming environment, vvvv carries this idea of <span style="color:#ff503d;"><strong>stream</strong></span><strong>&nbsp;</strong>all the way to the visual level: on the basis of this paradigm, we can manage things by hand upstream and downstream of any data &#8212;
+		</p>
+		<p style="font-size:15px;line-height:1.85;color:#333333;text-align:justify;" data-u="14" align="justify">
+			<br/>It is much like adding valves, dampers, and other components to a <span style="color:#ff503d;"><strong>pressurized three-dimensional urban water network</strong></span>&#8212;repairing, extending, maintaining, and iterating on the pipes while the supply is never cut off, and so achieving more transparent, controllable, and efficient management of the whole network.
+		</p>
+		<p style="font-size:15px;line-height:1.85;color:#333333;text-align:justify;" data-u="14" align="justify">
+			<br/>
+		</p>
+		<p style="font-size:15px;line-height:1.85;color:#333333;text-align:justify;" data-u="15" align="justify">
+			In vvvv, the two approaches can be combined. Beyond that, vvvv also offers flexible <span style="color:#ff503d;"><strong>Pad</strong></span>, <span style="color:#ff503d;"><strong>Public Channels</strong></span>, and various tools built by community developers, for flexible management.
+		</p>
+	</section><!-- 03 -->
+	<section style="margin-bottom:24px;padding:28px 22px 26px;background:rgb(23,25,27);color:#e8e9e6;box-sizing:border-box;line-height:1.9" class="">
+		<section style="font-size:11px;letter-spacing:1.5px;color:#dfff00;text-transform:uppercase;margin-bottom:12px" class="">
+			<span style="color: #ff503d;"><strong>04 / TIME AS INFRASTRUCTURE&nbsp;</strong></span>
+		</section>
+		<p style="margin:0 0 18px;font-size:25px;line-height:1.4;color:#dfff00;text-align:left;" data-u="16" align="left">
+			<span style="color: #ff503d;"><strong>Time is an infrastructure,<br/>invented precisely so that<br/>not all things happen at once.</strong></span><span style="color:#dfff00;"></span>
+		</p>
+		<p style="margin:0 0 18px;font-size:12px;line-height:1.7;color:#9a9e9b;text-align:left;" align="left">
+			<span style="color: #c6c6c7;">&#8212; quoted from graffiti on a wall of a building in Cambridge</span>
+		</p>
+		<p style="font-size:15px;line-height:1.85;color:#d0d3d3;text-align:justify;" data-u="17" align="justify">
+			A computer itself has no concept of time; time is&nbsp;<span style="color: #ff503d;"><strong>discrete</strong></span><span style="color:#dfff00;"><strong>&nbsp;</strong></span>, and everything about it can be defined and designed.<br/>The <span style="color: #ff503d;"><strong>Timeline</strong></span> we all know, as a commonly used <strong>time</strong> management feature, is in fact closer to a specific management tool for data change built on a <span style="color: #ff503d;"><strong>linear logical clock</strong></span>.
+		</p>
+		<p style="margin:18px 0;font-size:19px;line-height:1.75;color:#dfff00;text-align:left;" data-u="18" align="left">
+			<span style="color:#ff503d;"><strong>It is not that changes in data produce time,<br/>but that, by capturing and perceiving change,<br/>a person obtains a perceptual experience of time</strong></span>
+		</p>
+	</section><!-- 04 -->
+	<section style="margin-bottom: 24px; padding: 28px 22px 26px; background: #ff503d; box-sizing: border-box; line-height: 1.9;" class="">
+		<section style="color: #17191b; font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 12px;" class="">
+			<strong>05 / OBJECT / OOP&nbsp;</strong>
+		</section>
+		<section style="color: #17191b; margin: 0px 0px 16px; font-size: 26px; line-height: 1.35; text-align: left;" class="">
+			<strong>Understand the essence first,<br/>then master the method.</strong>
+		</section>
+		<p style="color: #17191b; font-size: 15px; line-height: 1.85;text-align:justify;" data-u="19" align="justify">
+			One last point about <span style="color: #f5f5f4; background-color: #17191b;"><strong>object orientation / OOP</strong></span><br/>Understanding its essence is far quicker than learning syntax<br/>This passage from Professor <strong>Sussman</strong> is extremely incisive:
+		</p>
+		<p style="color: #17191b; font-size: 15px; line-height: 1.85;text-align:justify;" data-u="19" align="justify">
+			<br/>
+		</p>
+		<p style="color: #17191b; font-size: 12px; line-height: 1.85; padding-left: 14px; border-left: 2px solid #17191b; margin: 0px 0px 14px; word-break: break-word; overflow-wrap: break-word;text-align:justify;" data-u="20" align="justify">
+			<strong><span style="text-decoration-line: none; font-size: 12px; color: #17191b;">&#8220;What an object actually is, is not obvious at all.<br/>We like to see the world as objects because thinking that way saves effort&#8212;an economy of thought.</span></strong>
+		</p>
+		<p style="color: #17191b; font-size: 12px; line-height: 1.85; padding-left: 14px; border-left: 2px solid #17191b; margin: 0px 0px 14px; word-break: break-word; overflow-wrap: break-word;text-align:justify;" data-u="20" align="justify">
+			<strong style="caret-color: red;">I am an object, you are an object, we are not the same object.<br/></strong><strong style="caret-color: red;">I can cut the world in two: me and you.<br/></strong><strong style="caret-color: red;">When I want to discuss how I work, I mostly need not involve you; and when discussing you, I need not involve me.</strong>
+		</p>
+		<p style="color: #17191b; font-size: 12px; line-height: 1.85; padding-left: 14px; border-left: 2px solid #17191b; margin: 0px 0px 14px; word-break: break-word; overflow-wrap: break-word;text-align:justify;" data-u="23" align="justify">
+			<strong><span style="text-decoration-line: none; font-size: 12px; color: #17191b;">I have blood pressure, body temperature, respiratory rate, blood glucose concentration... and thousands upon thousands&#8212;in fact millions, tens of millions&#8212;of &#8216;state variables&#8217;, which together describe what state &#8216;I as a particle&#8217; is in; you have an astronomical number of state variables too.</span></strong>
+		</p>
+		<p style="color: #17191b; font-size: 12px; line-height: 1.85; padding-left: 14px; border-left: 2px solid #17191b; margin: 0px 0px 14px; word-break: break-word; overflow-wrap: break-word;text-align:justify;" data-u="24" align="justify">
+			<strong><span style="text-decoration-line: none; font-size: 12px; color: #17191b;">And my state and your state are for the most part decoupled.<br/>So I can compute &#8216;me&#8217; on my own, without bothering about &#8216;you&#8217;.<br/>If we insist on computing both of us at once, the number of states to consider is the product of your states and mine; computed separately, it is roughly just addition.</span></strong>
+		</p>
+		<p style="color: #17191b; font-size: 12px; line-height: 1.85; padding-left: 14px; border-left: 2px solid #17191b; margin: 0px 0px 14px; word-break: break-word; overflow-wrap: break-word;text-align:justify;" data-u="25" align="justify">
+			<strong><span style="text-decoration-line: none; font-size: 12px; color: #17191b;">Of course there is real coupling between us: when I speak to you, your state changes; when I look at you, my state changes too. If I suddenly shout, your blood pressure jumps. So only a very few state variables are interconnected.</span></strong>
+		</p>
+		<p style="color: #17191b; font-size: 12px; line-height: 1.85; padding-left: 14px; border-left: 2px solid #17191b; margin: 0px 0px 14px; word-break: break-word; overflow-wrap: break-word;text-align:justify;" data-u="26" align="justify">
+			<span style="background-color: #17191b; color: #f5f5f4;"><strong><span style="background-color: #17191b; text-decoration-line: none; font-size: 12px;">But&#8212;seeing the world as &#8216;a pile of independent states, independent particles&#8217; is not always right.<br/>Many of the bugs in quantum mechanics, and many of the bugs in our heads when we try to understand quantum mechanics, come from this: <span style="background-color: #17191b; text-decoration-line: none; font-size: 12px;">the coupling is far deeper than it appears, yet we insist on breaking it into independent fragments, only because that is efficient to compute and because we have been trained to think that way.</span>”</span></strong></span>
+		</p>
+		<p style="color: #17191b; font-size: 12px; line-height: 1.85; padding-left: 14px; border-left: 2px solid #17191b; margin: 0px 0px 14px; word-break: break-word; overflow-wrap: break-word;text-align:justify;" data-u="27" align="justify">
+			<strong><span style="text-decoration-line: none; font-size: 12px; color: #17191b;">&#8220;How do you know whether there really is an &#8216;object&#8217;?<br/>...You grab one of them and change it, and see whether the other one changes.<br/>If it doesn't, then there are two.&#8221;</span></strong>
+		</p>
+		<p style="color: #17191b; font-size: 12px; line-height: 1.85; padding-left: 14px; border-left: 2px solid #17191b; margin: 0px 0px 14px; word-break: break-word; overflow-wrap: break-word;text-align:justify;" data-u="28" align="justify">
+			<span style="font-size:12px;"><em >&#8212; 1986, MIT, Structure and Interpretation of Computer Programs</em></span>
+		</p><!-- supplementary block: no vertical rule here, just put the cursor in and type; this hint can be deleted -->
+		<p style="font-size: 15px; line-height: 1.85; border-left: none; padding-left: 0px; margin: 0px 0px 14px;text-align:justify;" align="justify">
+			<span style="color: #17191b;">Object-oriented programming can be pursued in vvvv. As noted, the various paradigms and the different paths of development are all choices of engineering route made in response to different problems.</span>
+		</p>
+		<p style="font-size: 15px; line-height: 1.85; border-left: none; padding-left: 0px; margin: 0px 0px 14px;text-align:justify;" align="justify">
+			<span style="color: #17191b;"><strong>Functional</strong>, <strong>object-oriented</strong>, and <strong>data-flow</strong> styles all present a high degree of transparency in vvvv / VL, and can be combined and freely chosen according to the situation.</span>
+		</p>
+	</section><!-- 05 -->
+	<section class="">
+		<section style="height:1px;background:#c2c4c5;margin-top:22px;margin-bottom:14px;box-sizing:border-box" class="">
+			&nbsp;
+		</section>
+		<p style="font-size:15px;line-height:1.85;color:#333333;text-align:justify;" data-u="29" align="justify">
+			<br/>
+		</p>
+		<p style="font-size:15px;line-height:1.85;color:#333333;text-align:justify;" data-u="29" align="justify">
+			This is the fourth article in the series.
+		</p>
+		<p style="font-size:15px;line-height:1.85;color:#333333;text-align:justify;" data-u="29" align="justify">
+			<br/>
+		</p>
+		<p style="font-size:15px;line-height:1.85;color:#333333;text-align:justify;" data-u="30" align="justify">
+			Basically, I take the angle of understanding computation<span style="font-size:12px;"><strong> (more precisely, the structure and interpretation of computer programs)</strong></span> and use it to enter and unfold the exploration of <span style="color: #17191b;">vvvv / VL</span>. It is the structural foundation of every programming language; as for the various syntaxes, features, frameworks, libraries, tools... they all unfold around these basic principles, and can be understood as a kind of &#8220;internal skill.&#8221; Perhaps reading it will not concretely give you anything, but once you step into these fields, what you do and think about every day is basically dealing with them.
+		</p>
+		<p style="font-size:15px;line-height:1.85;color:#333333;text-align:justify;" data-u="30" align="justify">
+			<br/>
+		</p>
+		<p style="font-size:15px;line-height:1.85;color:#333333;text-align:justify;" data-u="31" align="justify">
+			Some friends may find concepts they have never seen before obscure and hard to grasp ......<br/>That's all right. <strong><span style="text-decoration-line:underline;">Human complexity is unimaginable, but computer programs are not like that.</span></strong><span style="text-decoration-line:none;"><strong>&nbsp;</strong></span>Treat <strong>vvvv</strong> as your object, and after a stretch of free exploration you will have a deep feel for these concepts.
+		</p>
+		<p style="font-size:15px;line-height:1.85;color:#333333;text-align:justify;" data-u="31" align="justify">
+			<br/>
+		</p>
+		<p style="font-size:15px;line-height:1.85;color:#333333;text-align:justify;" data-u="32" align="justify">
+			Back to the title of the first article: <strong>Complexity and Its Limits</strong><br/>What these pieces mainly introduce is:
+		</p>
+		<p style="font-size:15px;line-height:1.85;color:#333333;text-align:justify;" data-u="32" align="justify">
+			<br/>
+		</p>
+		<p style="font-size: 19px; line-height: 1.85; color: #333333;text-align:justify;" data-u="32" align="justify">
+			<span style="font-size:19px;"><strong>The basic technical principles of controlling complexity</strong></span>
+		</p>
+		<p style="font-size: 19px; line-height: 1.85; color: #333333;text-align:justify;" data-u="32" align="justify">
+			<br/>
+		</p>
+	</section><!-- 06 / ABOUT THIS SERIES (no background) -->
+	<section class="">
+		<section style="height:1px;background:#c2c4c5;margin-top:22px;margin-bottom:14px;box-sizing:border-box" class="">
+			&nbsp;
+		</section>
+	</section>
+	<section style="margin:18px 0;padding:20px 18px;background:#1a1d1f;color:#e8e9e6;box-sizing:border-box;font-size:16px;line-height:1.85;text-align:justify" align="justify" class="">
+		<p style="font-size:16px;line-height:1.85;color:#e8e9e6;text-align:justify;" data-u="33" align="justify">
+			<strong>People are always going through so-called &#8220;paradigm shifts.&#8221; On the surface we are embracing technological convenience; in reality it is a transfer of control over complexity.</strong>
+		</p>
+		<p style="font-size:16px;line-height:1.85;color:#e8e9e6;text-align:justify;" data-u="33" align="justify">
+			<br/>
+		</p>
+		<p style="font-size:16px;line-height:1.85;color:#e8e9e6;text-align:justify;" data-u="33" align="justify">
+			<strong>The transfer of complexity is not free of cost. Black-boxing, transparency, control, ultimate accountability, skill atrophy, loss of expressive precision... these are real problems that follow close behind.</strong>
+		</p>
+		<p style="font-size:16px;line-height:1.85;color:#e8e9e6;text-align:justify;" data-u="33" align="justify">
+			<strong><br/>I hope these things can bring you some different thinking and inspiration.<br/></strong>
+		</p>
+	</section>
+	<section style="margin: 0px 0px 14px; text-align: left;" align="justify" class="">
+		<section style="height:1px;background:#c2c4c5;margin-top:22px;margin-bottom:14px;box-sizing:border-box" class="">
+			&nbsp;
+		</section>
+		<p style="font-size: 11px;margin-top: 0;line-height: 1.7;box-sizing:border-box;text-align:left;" align="left">
+		
+		</p>
+		<p style="font-size: 11px;margin-top: 0;line-height: 1.7;box-sizing:border-box;text-align:left;" draggable="true" align="left">
+			<br/>Useful links:<br/><br/><span style="caret-color: red; text-decoration-line: underline; font-size: 12px; color: #17191b;"><strong style="text-decoration-line: underline">Official website:</strong><strong style="text-decoration-line: underline"><a href="https://vvvv.org/" _src="https://vvvv.org/" style="text-decoration-line: underline; font-size: 12px; color: #17191b;">https://vvvv.org</a></strong></span><span style="font-size: 12px; color: #17191b;"><span style="caret-color: red; font-size: 12px; color: #17191b;"><br/> </span><span style="caret-color: red; text-decoration-line: none; font-size: 12px; color: #17191b;"><strong style="text-decoration-line: underline;caret-color: red">Official documentation (The Gray Book):</strong><strong style="text-decoration-line: underline;caret-color: red"><a href="https://thegraybook.vvvv.org/" style="caret-color: red; text-decoration-line: none; font-size: 12px; color: #17191b;">The Gray Book</a></strong>&nbsp;<br/></span><strong style="caret-color: red;text-decoration-line: underline">Educational institution:</strong><strong style="caret-color: red;text-decoration-line: underline"><a href="https://thenodeinstitute.org/" style="caret-color: red; text-decoration-line: underline; font-size: 12px; color: #17191b;">The NODE Institute</a></strong><span style="caret-color: red; font-size: 12px; color: #17191b;">&nbsp;<br/></span><span style="caret-color: red; text-decoration-line: underline; font-size: 12px; color: #17191b;"><strong>Chinese-language website:</strong><strong><a href="https://www.nodenodenode.net" _src="https://www.nodenodenode.net" style="text-decoration-line: underline; font-size: 12px; color: #17191b;">https://www.nodenodenode.net</a></strong><strong><span style="caret-color: red; text-decoration-line: underline; font-size: 12px; color: #17191b;"><br/></span>Chinese documentation: https://thegraybook.nodenodenode.net/&nbsp;</strong></span></span><a href="https://www.nodenodenode.net" style="font-size: 12px"></a>
+		</p>
+		<section style="height:1px;background:#c2c4c5;margin-top:22px;margin-bottom:0;box-sizing:border-box" class="">
+			&nbsp;
+		</section>
+		<section style="font-size: 11px;margin-top: 0;line-height: 1.7;box-sizing:border-box;text-align:left" align="left" class="">
+			<br/>
+			<section style="display: flex;align-items: flex-start;gap: 12px;padding: 18px 0px 6px;width: 100%;flex: 0 0 100%;max-width:100% !important;box-sizing:border-box;" class="" data-width="100%">
+				<section style="width:3px;height:100%;min-height:110px;background:#ff503d;flex-shrink:0;box-sizing:border-box;" class="" data-ignore-width></section>
+				<section style="font-size:12px;line-height:1.9;color:#17191b;box-sizing:border-box" class="">
+					<section style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#555b5e;margin-bottom:4px;box-sizing:border-box" class="">
+						Author
+					</section>
+					<section style="font-size:18px;letter-spacing:0.5px;box-sizing:border-box" class="">
+						<strong>Mokusama</strong>
+					</section>
+					<section style="margin-top:6px;box-sizing:border-box" class="">
+						Designer | Artist | Creative Computing
+					</section>
+					<section style="margin-top:6px;color:#555b5e;box-sizing:border-box" class="">
+						Connecting creative communities and makers
+					</section>
+					<section style="margin-top: 8px;font-size: 11px;letter-spacing: 1.4px;color: #ff503d;text-transform: uppercase;box-sizing: border-box" class="">
+						<strong># vvvvcommunity</strong>
+					</section>
+				</section>
+			</section>
+		</section>
+	</section>
+</section>

@@ -1,0 +1,335 @@
+<section data-role="paragraph" class="_135editor">
+	<p>
+		Understanding Computation: Computational Process<br/><br/>
+	</p>
+</section>
+<section style="margin:0 auto;padding:18px 14px 40px;background:#d4d6d7;box-sizing:border-box;" class="">
+	<!-- Meta bar -->
+	<section style="margin:0 0 18px;padding:12px 0 0;border-top:1px solid rgba(23,25,27,0.18);box-sizing:border-box;line-height:1.8;" class="">
+		<p style="font-size:10px;letter-spacing:2px;color:#17191b;text-transform:uppercase;box-sizing:border-box;">
+			<br/>
+		</p>
+		<p style="font-size:10px;letter-spacing:2px;color:#17191b;text-transform:uppercase;box-sizing:border-box;">
+			<strong>SICP ch.1</strong>
+		</p>
+		<p style="font-size:10px;letter-spacing:2px;color:#17191b;text-transform:uppercase;box-sizing:border-box;">
+			<br/>
+		</p>
+		<section style="font-size: 12px; line-height: 1.95; color: #33383a; font-style: italic; text-align: justify;" class="">
+			<p>
+				<span style="font-size:12px;">The acts of the mind, wherein it exerts its power over simple ideas, are chiefly these three:<br/></span>
+			</p><span style="font-size:12px;"><strong>1.</strong> Combining several simple ideas into one compound one, and thus all complex ideas are made.<br/><strong>2.</strong> The second is bringing two ideas, whether simple or complex, together, and setting them by one another so as to take a view of them at once, without uniting them into one, by which it gets all its ideas of relations.<br/><strong>3.</strong> The third is separating them from all other ideas that accompany them in their real existence: this is called abstraction, and thus all its general ideas are made.</span>
+		</section>
+		<p style="margin: 16px 0px 22px; font-size: 10px; letter-spacing: 1.4px; color: #555b5e; text-transform: uppercase; line-height: 1.7;text-align:left;" align="left">
+			— John Locke,&nbsp;<br/><span style="letter-spacing: 1.4px; caret-color: red;">An Essay Concerning Human Understanding (1690)</span>
+		</p>
+		<p style="margin-top:8px;font-size:10px;letter-spacing:1.4px;color:#555b5e;text-transform:uppercase;box-sizing:border-box;">
+		
+		</p>
+	</section>
+	<section style="border-top: 5px solid #17191b; border-bottom: 1px solid #555b5e; padding: 12px 0px; font-size: 10px; letter-spacing: 2px; text-transform: uppercase; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;box-sizing:border-box;" class="">
+		<p style="text-align:left;" align="left">
+			<span style="font-size:10px;">Mokusama<br/>22.5566,114.0982<br/>26,10,2026<br/><br/><strong><span style="letter-spacing: 2px; text-align: right; text-transform: uppercase; caret-color: #ff0000; background-color: #d4d6d7; font-size: 10px; color: #ff503d; display: inline !important;font-family:mp-quote, -apple-system-font, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif;">VOL.002 — VL / </span></strong><strong><span style="letter-spacing: 2px; text-align: right; text-transform: uppercase; caret-color: #ff0000; background-color: #d4d6d7; font-size: 10px; color: #ff503d; display: inline !important;font-family:mp-quote, -apple-system-font, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif;">VVVV</span></strong><span style="color: #333333; letter-spacing: 2px; text-align: right; text-transform: uppercase; caret-color: #ff0000; background-color: #d4d6d7; font-size: 10px; display: inline !important;font-family:mp-quote, -apple-system-font, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif;"><br/></span>CREATIVE COMPUTING</span>
+		</p>
+	</section><!-- Masthead -->
+	<section style="margin:0 0 22px;padding:32px 22px 26px;background:#17191b;color:#f1f2ef;box-sizing:border-box;line-height:1.9;" class="">
+		<section style="margin-bottom: 22px; font-size: 12px; letter-spacing: 2px; color: #dfff00; text-align: justify;" class="">
+			Computational Process · Functions · Levels of Abstraction
+		</section>
+		<section style="font-size: 38px; line-height: 1.16; letter-spacing: -1px; text-align: left;" class="">
+			<strong>Understanding Computation:</strong><br/><strong>Computational Process.</strong>
+		</section>
+		<section style="margin: 14px 0px 22px; font-size: 21px; line-height: 1.4; color: #dfff00; text-align: left;" class="">
+			<strong>Structured Notes on Self-Study Creative Computing with vvvv gamma</strong>
+		</section>
+		<section style="height:4px;width:72px;background:#ff503d;margin-bottom:18px;box-sizing:border-box;" data-ignore-width class=""></section>
+		<section style="font-size: 14px; color: #d0d3d3; line-height: 1.7; text-align: left;" class="">
+			Don't just look at the results. Try to see how data is processed by rules,<br/>and whether you can rewrite those rules yourself.
+		</section>
+		<p style="margin-top:28px;padding-top:10px;border-top:1px solid #555;font-size:10px;letter-spacing:1.4px;color:#7a8084;text-transform:uppercase;box-sizing:border-box;">
+			Computational Process.<br/>FUNCTION.&nbsp;<br/>Abstraction LEVELS.<br/>
+		</p>
+	</section><!-- HERO -->
+	<section style="margin-bottom:24px;padding:28px 22px 26px;background:#ffffff;box-sizing:border-box;line-height:1.9;" class="">
+		<section style="font-size:11px;letter-spacing:1.5px;color:#ff503d;text-transform:uppercase;margin-bottom:12px;" class="">
+			<strong>01 / EPIGRAPH — JOHN LOCKE, 1690</strong>
+		</section>
+		<section style="font-size:23px;line-height:1.45;margin:0 0 18px;text-align:left;" class="">
+			<strong>Three basic operations</strong><br/><strong>of the mind.</strong>
+		</section>
+		<p>
+			<em><span style="font-size:12px;">The acts of the mind, wherein it exerts its power over simple ideas, are chiefly these three:</span></em>
+		</p>
+		<p>
+			<em><span style="font-size:12px;">1. Combining several simple ideas into one compound one&#8212;and thus all complex ideas are made.</span></em>
+		</p>
+		<p>
+			<em><span style="font-size:12px;">2. Bringing two ideas, whether simple or complex, together, and setting them by one another so as to take a view of them at once, without uniting them into one&#8212;by which it gets all its ideas of relations.</span></em>
+		</p>
+		<p>
+			<em><span style="font-size:12px;">3. Separating them from all other ideas that accompany them in their real existence; this is called abstraction, and thus all its general ideas are made.</span></em>
+		</p>
+		<p style="margin:16px 0 22px;font-size:10px;letter-spacing:1.4px;color:#555b5e;text-transform:uppercase;line-height:1.7;">
+			— John Locke, <em>An Essay Concerning Human Understanding</em> (1690)<br/><br/>
+		</p>
+		<p style="font-size:15px;line-height:1.85;text-align:justify;" align="justify">
+			Locke is describing the three basic operations the mind performs on ideas:
+		</p>
+		<p style="font-size:15px;line-height:1.85;text-align:justify;" align="justify">
+			<br/>
+		</p>
+		<p style="font-size: 18px; line-height: 1.85;text-align:justify;" align="justify">
+			<span style="color: #ff503d; font-size: 18px;"><strong>Combination</strong></span>
+		</p>
+		<p style="font-size:15px;line-height:1.85;text-align:justify;" align="justify">
+			<span style="color: #ff503d; font-size: 18px;"><strong>Relation<span style="color: #ff503d; font-size: 14px;       text-align: justify;       caret-color: #ff0000;    display: inline !important; ;font-family:mp-quote, -apple-system-font, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei UI&quot;, &quot;Microsoft YaHei&quot;, Arial, sans-serif;">&nbsp;</span></strong></span><span style="color:#ff503d;"><strong><span style="font-size: 12px;">(comparison, to form ideas of relations)</span></strong></span>
+		</p>
+		<p style="font-size: 18px; line-height: 1.85;text-align:justify;" align="justify">
+			<span style="color: #ff503d; font-size: 18px;"><strong>Abstraction</strong></span>
+		</p>
+		<p style="font-size: 18px; line-height: 1.85;text-align:justify;" align="justify">
+			<br/>
+		</p>
+		<p style="font-size:15px;line-height:1.85;text-align:justify;" align="justify">
+			Words written more than three hundred years ago land exactly on what we do in vvvv without noticing&#8212;wiring nodes, parameters and Pads together; laying several sets of logic side by side to compare them; distilling rules out of Patches that already exist.
+		</p>
+		<p style="font-size:15px;line-height:1.85;text-align:justify;" align="justify">
+			<br/>
+		</p>
+		<p style="font-size:15px;line-height:1.85;text-align:justify;" align="justify">
+			Humans manage all of it by instinct.
+		</p>
+	</section><!-- 01 -->
+	<section style="margin-bottom:24px;padding:28px 22px 26px;background:#dfff00;color:#17191b;box-sizing:border-box;line-height:1.9;" class="">
+		<section style="font-size:11px;letter-spacing:1.5px;color:#17191b;text-transform:uppercase;margin-bottom:12px;" class="">
+			<strong>02 / PROGRAM VISIBILITY</strong>
+		</section>
+		<section style="margin:0 0 16px;font-size:29px;line-height:1.28;text-align:left;" class="">
+			<strong>Program visibility</strong><br/><strong>is also a degree of freedom.</strong>
+		</section>
+		<p style="font-size:15px;line-height:1.85;text-align:justify;" align="justify">
+			Copying Patches, copying examples, dragging nodes and adjusting parameters is a fast way to get started&#8212;but the complexity of computation and of programs is not there to make the user's job harder. Don't be overwhelmed by a screen full of nodes and connections: program visibility is also a degree of freedom.
+		</p>
+		<p style="font-size:15px;line-height:1.85;text-align:justify;" align="justify">
+			At different levels of abstraction, the things a person can do are different.
+		</p>
+		<p style="margin-top:14px;font-size:15px;line-height:1.85;text-align:justify;" align="justify">
+			This is also why this series shares computational thinking rather than specific examples: AI can already do a great many things, and it is especially good at copying and migrating what already exists. How to open up more possibilities by understanding the computational process is a direction worth considering.
+		</p>
+	</section><!-- 02 -->
+	<section style="margin-bottom:24px;padding:28px 22px 26px;background:#17191b;color:#f1f2ef;box-sizing:border-box;line-height:1.9;" class="">
+		<section style="font-size:11px;letter-spacing:1.5px;color:#dfff00;text-transform:uppercase;margin-bottom:12px;" class="">
+			<span style="color: #dfff00;"><strong>03 / START WITH THE FUNCTION</strong></span>
+		</section>
+		<section style="margin:0 0 16px;font-size:26px;line-height:1.3;text-align:left;" class="">
+			<strong>Everything begins with understanding the function.</strong>
+		</section>
+		<p style="font-size:15px;line-height:1.85;color:#d0d3d3;">
+			<br/>
+		</p>
+		<p style="font-size:15px;line-height:1.85;color:#d0d3d3;">
+			Function.
+		</p>
+		<p style="margin:18px 0;font-size:14px;line-height:2.05;color:#dfff00;letter-spacing:0.5px;font-family:Consolas,Monaco,monospace;">
+			<strong><span style="color: #dfff00; font-size: 14px;     letter-spacing: 0.5px;  text-align: justify;       caret-color: #ff0000; background-color: #17191b;   display: inline !important; ;font-family:Consolas, Monaco, monospace;">y = f(x)</span></strong>
+		</p>
+		<p>
+			<span style="font-size: 15px; color: #dfff00;"><strong>A function can be seen as the relationship between input, output, and a processing rule</strong></span><strong style="caret-color: red;"><span style="font-size: 15px; color: #dfff00;">.</span></strong>
+		</p>
+		<p>
+			<strong><span style="font-size: 15px; color: #dfff00;">Input a pig, output a bowl of pork-trotter rice.</span></strong>
+		</p>
+		<p>
+			<strong><span style="font-size: 15px; color: #dfff00;">We abstract this processing into a function and name it &#8220;Kitchen.&#8221;</span></strong>
+		</p>
+		<p style="margin:18px 0;font-size:14px;line-height:2.05;color:#dfff00;letter-spacing:0.5px;font-family:Consolas,Monaco,monospace;">
+			<strong>input → function → output</strong>
+		</p>
+		<section style="margin:18px 0;padding:0;background:transparent;box-sizing:border-box;" class=""></section>
+		<p style="font-size:15px;line-height:1.85;color:#d0d3d3;">
+			Expanded in vvvv, the data flows from top to bottom:
+		</p>
+		<p style="font-size:15px;line-height:1.85;color:#d0d3d3;">
+			<br/>
+		</p>
+		<p style="font-size:15px;line-height:1.85;color:#d0d3d3;">
+			<img src="data:image/png;base64,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" style="vertical-align: baseline; width: 100%;box-sizing:border-box;max-width:100% !important;" alt="y=fx.jpg" data-ratio="0.4987684729064039" data-w="812"/>
+		</p>
+	</section><!-- 03 -->
+	<section style="margin-bottom:24px;padding:28px 22px 26px;background:#17191b;box-sizing:border-box;line-height:1.9;" class="">
+		<section style="font-size:11px;letter-spacing:1.5px;color:#ff503d;text-transform:uppercase;margin-bottom:12px;" class="">
+			<span style="color:#dfff00;"><strong>04 / THREE LAYERS</strong></span>
+		</section>
+		<p style="margin:0 0 16px;font-size:24px;line-height:1.3;text-align:left;" align="left">
+			<span style="color:#f5f5f4;"><strong>Primitives, encapsulation, black box.</strong></span>
+		</p>
+		<p style="margin: 0px 0px 16px; font-size: 15px; line-height: 1.3;text-align:left;" align="left">
+			<span style="font-size:15px;"><span style="color: #f1f2ef; letter-spacing: 0.5px; text-align: justify;">Take a classic linear function as an example:</span></span>
+		</p>
+		<p style="margin:0 0 16px;font-size:24px;line-height:1.3;text-align:left;" align="left">
+			<span style="color: #dfff00; font-size: 15px;"><strong style="caret-color: red; color: #f5f5f4;"><span style="color: #dfff00; letter-spacing: 0.5px; text-align: justify;font-family:Consolas, Monaco, monospace;">y = kx + b</span></strong></span><span style="color:#dfff00;"><strong style="caret-color: red; color: #f5f5f4;"><span style="font-size: 14px; letter-spacing: 0.5px; text-align: justify;font-family:Consolas, Monaco, monospace;">&nbsp;</span></strong></span>
+		</p>
+		<p style="margin:0 0 16px;font-size:24px;line-height:1.3;text-align:left;" align="left">
+			<span style="color:#f5f5f4;"><strong><img src="data:image/png;base64,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" style="vertical-align: baseline; width: 100%;box-sizing:border-box;max-width:100% !important;" alt="y=kx+b 01.jpg" data-ratio="0.49857142857142855" data-w="700"/></strong></span>
+		</p>
+		<section style="margin:18px 0;padding:0;background:transparent;box-sizing:border-box;" class=""></section>
+		<section style="margin:18px 0;padding:0;background:transparent;box-sizing:border-box;" class=""></section>
+		<section style="margin:18px 0;padding:0;background:transparent;box-sizing:border-box;" class=""></section>
+		<p style="font-size:15px;line-height:1.85;text-align:justify;" align="justify">
+			<span style="color:#f5f5f4;">This is an expression built from vvvv's basic primitives and math library.</span>
+		</p>
+		<p style="font-size:15px;line-height:1.85;text-align:justify;" align="justify">
+			<span style="color:#f5f5f4;">It means that everything can be reduced to a mathematical computational process.</span>
+		</p>
+		<p style="font-size:15px;line-height:1.85;text-align:justify;" align="justify">
+			<br/>
+		</p>
+		<p style="font-size:15px;line-height:1.85;text-align:justify;" align="justify">
+			<span style="color:#f5f5f4;"><img src="data:image/png;base64,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p556qqam5lNNFbS2tkYjo7a2tq6uLisrKxKJGOe7RFdX17Vr18aNG5eenm40CJYnIJ6kpKQsX758165dtbW1/W+vqqpavXr11772tQMHDtTU1IR+qxj5+fmxq+vXr49eOHDgQHQ54zqnT58uKioyznfbZEN6enpGRkZnZ2dvb68BQTRAnMjIyLhy5UpxcfHu3bv7Tyd87nOfS0lJufH+sZ0NkUhk5cqVGzdutF+BGycbotMMaWlp7e3tBoRgeQLiw6lTp37605/euPNg5cqVZ86cqa6ujkQiJSUl//Xjz5w5s7Oz05/kvqtMmDAhhNDX13fhwgWjgWiAuFJbW7tt27acnJyKioroLWVlZVlZWb///e+3bNly6tSp5cuXf6pNCZMmTYpunywpKcnJyfn444/NRoS76ajL1NTUEMK5c+euXr1qQBANEG9qamrefvvtOXPmVFRUlJSULFy4cNu2bdFdDhs3buzs7HzppZcGf0qGxsbGmTNnbt269YUXXogdusndM82QkJDQ3d0dPYwC/MEqCP5gFYSb/cGq7OzsxMTEU6dOmWbATAMAtzR27NikpKT29nbFgKMnALid3t7ejz76yDgQzDQAAKIBABANAADBnga4malTpz7++OM33t7U1NTW1mZ8GFqnT5++fPmycUA0wGh177333nhjS0vL+PHjDQ5AsDwBAIgGACBYnoChd9M/FNTb29vT02NwAILTSMN1Jk+evHz58p07dzY2NhoNgGB5AgAQDQCAaAAARAMAIBoAANEAAIgGAADRAACIBgBANAAAogEAEA0AgGgAAEQDAIBoAABEAwAgGgAA0QAAiAYAQDQAAKIBAEA0AACiAQAQDQCAaAAARAMAIBoAANEAACAaAADRAACIBgBANAAAogEAEA0AgGgAABANAIBoAABEAwAgGgAA0QAAiAYAQDQAAIgGAEA0AACiAQAQDQCAaAAARAMAIBoAAEQDACAaAADRAACIBgBANAAAogEAEA0AAKIBABANAIBoAABEAwAgGgAA0QAAiAYAANEAAIgGAEA0AACiAQAQDQCAaAAARAMAgGgAAEQDACAaAADRAACIBgBANAAAogEAQDQAAKIBABANAIBoAABEAwAgGgAA0QAAIBoAANEAAIgGAGAkGWsIYJAyMzMTEhJG7NPr6Ojo6urybQJEA4wIEyZMGMnR4BsEBMsTAIBoAABGh4Tk5GSjwF3u/vvvnzt3biQS6evrmzJlSlZW1pUrVy5cuHDd3ZKTk8ePHz9iX0VXV9eVK1d8N4FgTwN8Rr7whS888sgjsatJSUkZGRkzZsyoq6vbtWuX8QEIlicghLBo0aL+xdBfUVHRkiVLDBGAaIBQVFQ0Y8aM29xh2rRps2fPHjlPuLKyctOmTbm5uXfyIKWlpe+99155eXnsls2bN+/YsaOgoMBbAhANcHOzZs0a8D6RSGSEPNuKior8/Pwhf9jy8vK0tLRVq1adOHHCWwIQDXAT9957b2Zm5oB3S0tLy8rKGvZnW1ZWVlRUVF1dffny5SF82OLi4iVLlrz11luKARANcEvp6emDvGdaWtrwPtVIJLJw4cJdu3a1tbUN4cMWFBSsXr36n//859atW70fANEAt3Tt2rVB3rOvr28Yn2dubu5LL71UV1e3ZcuWIXnAxsbGnp6evLy8b3zjGyGEX/7yl94MQHDIJdxGe3v7kN/zs7BixYrOzs5169YN7cPm5eWlp6f/8Ic/tDABiAYIA54KqampacAjEVpbW4cxGiKRSFFRUXJycv8VhPXr11dXV9/hxEN+fn5VVdW+ffu8EwDRAAM7dOjQgNFw8ODBYXyGtbW1X//610O/7ZDFxcVr165tamq6w0eur6/fsGGD9wAQ7GmAwfj4449v/1H74MGDx48fj7NXXVxcHEL4xS9+4Q0ABDMNMHj79++/dOnS/PnzExMT+99+9erVPXv2HD58OM5eb2lp6Ze//OU333zTwgTwXxgzceJEo8Dd3s5jxxYWFk6ePDkpKam7u/vMmTPHjh3r7u6+7m6ZmZmpqakj9lW0trZ2dXXdfo5hzZo1hw4dev31133TAdEAn6HRHg0AwZ4GAEA0AACiAQAQDQBAsBESAAhmGgAARAMAIBoAANEAAIgGAEA0AACiAQAQDQAAogEAEA0AgGgAAEQDACAaAADRAACIBgAA0QAAiAYAQDQAAKIBABANAIBoAABEAwCAaAAARAMAIBoAANEAAIgGAEA0AACiAQBANAAAogEAEA0AgGgAAEQDACAaAADRAAAgGgAA0QAAiAYAQDQAAKIBABANAMBd7P8A0g3UT2W0TYwAAAAASUVORK5CYII=" style="vertical-align: baseline; width: 100%;box-sizing:border-box;max-width:100% !important;" alt="y=kx+b 02.jpg" data-ratio="0.5" data-w="700"/></span>
+		</p>
+		<p style="font-size:15px;line-height:1.85;text-align:justify;" align="justify">
+			<span style="color:#f5f5f4;">This is the first expression, encapsulated as the function f (kx+b).</span>
+		</p>
+		<p style="font-size:15px;line-height:1.85;text-align:justify;" align="justify">
+			<span style="color:#f5f5f4;">It keeps the control structure, but the rules of operation are hidden.</span>
+		</p>
+		<p style="font-size:15px;line-height:1.85;text-align:justify;" align="justify">
+			<br/>
+		</p>
+		<p style="font-size:15px;line-height:1.85;text-align:justify;" align="justify">
+			<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA0AAAAGgCAIAAAAM2pC+AAASaUlEQVR42u3dXWyV9eHA8V/foaclVFodeJQWUIbWIlatmS9EswxTe+HFmmqTyq5MvMDEFwqZN0uWZQMviNJlictiRkOTZoskW+0uJOzCG8vWCysTRcVTOW3BWqh9U3pa+r84///5n6GoYFvOsZ/P1eE5j304v/NEvn1+z0tOeXl5AAAge+QaAgAAAQcAgIADAEDAAQAIOAAABBwAAAIOAEDAAQAg4AAAEHAAAAIOAAABBwCAgAMAEHAAAAg4AAAEHACAgAMAQMABACDgAAAEHAAAAg4AAAEHACDgAAAQcAAACDgAAAEHAICAAwBAwAEACDgAAAQcAAACDgAAAQcAIOAAABBwAAAIOAAAAQcAgIADAEDAAQAIOAAABBwAAAIOAEDAAQAg4AAAEHAAAAIOAAABBwCAgAMAEHAAAAg4AAAEHACAgAMAIFPlGwJgMeXl5eXnZ/3/ec6fP++rBAQcsIT86Ec/yuq//+zsbDwe9z0CwRQqAAACDgBAwAEAEJwDB/wg3Hjjjdddd11xcfGFCxc+//zzeDx+9uxZwwIg4IBMVFNTc/vtt5eWll60vL+//+jRo59++qkhAph3ecXFxUYBuDLbtm3bsmVLUVHRV99auXLlrbfeOjk5OTw8nL48Nzd3xYoVWf2p5+bmxsbGfPtAcA4ckHV+9rOfbdiw4ZvXefDBB791HQAEHLAYqqurb7rppvQl8Xi8t7f3nXfemZycTF++devWwsLCTP4s0Wi0ra2ts7Ozs7Nzz549C7GJdevWHTp06M0332xqakotPHDgwFtvvfX000/bnYBgChUIizJ5mpo5TSQSXV1dw8PDd91119zcXHt7e05OTjQaTb6bn58/Ozs7ODiYsVOoY2Nj3d3dJ06cuPPOOycnJw8fPhzmewr13Llzd955Z1VV1czMzBtvvJGstzVr1uzcufO1116zOwHBETggLPwhq/QI+8c//tHY2Pivf/1r7969f/rTnz788MMzZ8785z//Sa1gFjWE8Ne//nViYmLLli11dXXJenvhhRd6enqMDCDggMVw3XXXpV4PDg7Ozc398pe/TC2pqKhoa2vr6+tLLbnmmmuWLVu2xAetp6dncHCwpKTkpZdeKi0tffLJJ9UbIOCAxbN8+fLU608//fT++++/aIV77713aGjoUv/JkvXvf/87hDA0NPTcc8+dPHnSgAACDgiL+TT31OuioqKLbhQSQpiYmMjP/6/bTM7MzCzxQXvxxRcbGxsnJibKy8vvuusuexEg4IBFNTo6mnq9fv36119/PRaLpa/whz/8YdOmTenBNz4+vsTr7Z577mlra/vb3/5WUFDwyCOP2IsAAQcsqng8nnpdWFi4devWhx9+OHlx5dmzZ3/729/u37//3nvvTa3zySefLOXhOnDgwJYtW55//vnOzs6urq6hoaE1a9bU1dXZkQABByye8fHxjz76KPXH2traO+6449lnn12xYsWPf/zj7u7uxx9/PP0WRe++++7SHKimpqY333wz/YLTkydPfvjhhyUlJT//+c/tSEDwLFRgMR09erSqqio3939/Cbz55ptvvvnmr13zgw8+uGiCdelI3hz4ooU7d+60/wDBEThg8Z09e/Zbb3gbQjh9+vSRI0cMF0BwBA7IBB988EEikXjggQdKS0u/doUTJ07885//dP0pwLzLKS8vNwrAFcvNzd28efOGDRuuvfba5JLp6elTp04dP368v7//q+vn5eWlnrIVsvYuKumXcQAIOCBblZWVPfrooyGEV1999RtWE3AAwRQqkDlZc6m5VACCixgAAAQcAAACDgAAAQcAQHARA7D4JiYmDAKAgANCFl2sOjIyYhwAgilUAAABBwCAgAMAQMABAAg4AAAEHAAAAg4AQMABzI/+/n6DACDgAAAQcAAAAg4AAAEHAICAAwAQcAAACDgAAAQcAICAAwBAwAEAIOAAAAQcAAACDgAAAQcAIOAAABBwAAAIOAAAAQcAgIADAEDAAQAIOAAABBwAAAIOAEDAAQAg4AAAEHAAAAg4AAABBwCAgAMAQMABAAg4AAAEHAAAAg4AQMABACDgAAAQcAAAAg4AAAEHAICAAwAQcAAACDgAAAQcAICAAwBAwAEAIOAAAAQcAAACDgAAAQcAIOAAABBwAAAIOAAAAQcAgIADAEDAAQAg4AAABBwAAAIOAAABBwAg4AAAEHAAAAg4AAABBwCAgAMAQMABAAg4AAAEHAAAAg4AQMABACDgAAAQcAAAAg4AAAEHAICAAwAQcAAACDgAAAQcAICAAwBAwAEAIOAAAAQcAAACDgAAAQcAIOAAABBwAAAIOAAABBwAgIADAEDAAQAg4AAABBwA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" style="vertical-align: baseline; width: 100%;box-sizing:border-box;max-width:100% !important;" alt="y=kx+b 03.jpg" data-ratio="0.5" data-w="832"/>
+		</p>
+		<p style="font-size:15px;line-height:1.85;text-align:justify;" align="justify">
+			<span style="color:#f5f5f4;">This is what we encounter most often; a structure like this can take the form of any program.</span>
+		</p>
+		<p style="font-size:15px;line-height:1.85;text-align:justify;" align="justify">
+			<span style="color:#f5f5f4;">I named it the Pro version of kx+b: with a single operating parameter you get an approximate result. It is an opaque black box.</span>
+		</p>
+		<p style="font-size:15px;line-height:1.85;text-align:justify;" align="justify">
+			<span style="color:#f5f5f4;">Don't think about k and b here: if you are not its designer and have no permission to go inside, that thinking loses its practical meaning.<span style="font-size: 12px; color: #ff503d;"><br/></span></span>
+		</p>
+		<p style="font-size:15px;line-height:1.85;text-align:justify;" align="justify">
+			<span style="color:#f5f5f4;"><span style="font-size: 12px; color: #ff503d;">(In fact it is an ultimate deluxe black box merely named kx+b_Pro: I put no computation inside it at all, only a value of 4, of type Integer32, on the output :p)</span></span>
+		</p>
+		<p style="font-size:15px;line-height:1.85;text-align:justify;" align="justify">
+			<br/>
+		</p>
+		<p style="font-size:15px;line-height:1.85;text-align:justify;" align="justify">
+			<span style="color:#f5f5f4;">If we encapsulate a complex program completely and expose only one small interactive button, or keep just one dialog box, would it become a nearly perfect product?</span>
+		</p>
+		<section style="margin-top:18px;font-size:18px;line-height:1.7;" class="">
+			<span style="color:#f5f5f4;"><strong>The difference between the three layers is not how powerful they are,</strong><br/></span>
+			<p>
+				<span style="color:#f5f5f4;"><strong>it is how much of the computational process itself you can see,</strong></span>
+			</p>
+			<p>
+				<span style="color:#f5f5f4;"><strong>and at which level you do the designing and defining.</strong></span>
+			</p>
+		</section>
+	</section><!-- 04 -->
+	<section style="margin-bottom:24px;padding:28px 22px 26px;background:#f5f5f4;color:#f1f2ef;box-sizing:border-box;line-height:1.9;" class="">
+		<section style="font-size:11px;letter-spacing:1.5px;color:#dfff00;text-transform:uppercase;margin-bottom:12px;" class="">
+			<span style="color: #ff503d;"><strong>05 / THE PROCESS ITSELF</strong></span>
+		</section>
+		<section style="margin:0 0 16px;font-size:25px;line-height:1.3;text-align:left;" class="">
+			<span style="color:#333333;"><strong>The computational process itself</strong><br/><strong>is an abstract thing.</strong></span>
+		</section>
+		<section style="font-size:15px;line-height:1.85;color:#d0d3d3;text-align:justify;" class="">
+			<p>
+				<span style="color:#333333;">In short, everything is about</span> <span style="color:#ff503d;"><strong style="color:#ff503d;">Computational Process</strong><strong style="color:#ff503d;"></strong></span><span style="color:#333333;">.</span>
+			</p><br/>
+			<p>
+				<span style="color:#333333;">The computational process itself is an abstract thing. It is not a node, not code, not anything visible on the screen. It is the abstraction of &quot;data being processed by rules.&quot;</span>
+			</p>
+			<p>
+				<br/>
+			</p><span style="color: #ff503d; font-size: 18px;"><strong>Process<span style="color: #ff503d; font-size: 12px;"> (an abstraction)</span></strong> <strong>→ Operation → Data<span style="color: #ff503d; font-size: 12px;"> (an abstraction)</span><br/></strong></span>
+			<p>
+				<span style="color: #ff503d; font-size: 18px;"><strong>These processes are guided by a program<span style="color: #ff503d; font-size: 12px;"> (a pattern of rules)</span></strong></span>
+			</p>
+			<p>
+				<br/>
+			</p>
+			<p>
+				<span style="color: #333333; caret-color: red; letter-spacing: 0.3px;">The function y = f (x)&nbsp; is one way of describing a process.</span>
+			</p>
+		</section>
+		<p style="font-size:15px;line-height:1.85;color:#d0d3d3;text-align:justify;" align="justify">
+			<span style="color:#333333;">A node is a visual presentation of a process.</span>
+		</p>
+		<p style="font-size:15px;line-height:1.85;color:#d0d3d3;text-align:justify;" align="justify">
+			<span style="color:#333333;">A Patch is an organizational structure for a process.</span>
+		</p>
+		<p style="font-size:15px;line-height:1.85;color:#d0d3d3;text-align:justify;" align="justify">
+			<span style="color:#333333;">But the process itself&#8212;&quot;one thing becoming another thing through some rule&quot;&#8212;exists before any of these concrete forms.</span>
+		</p>
+	</section><!-- 05 -->
+	<section style="margin-bottom:24px;padding:28px 22px 26px;background:#ff503d;color:#17191b;box-sizing:border-box;line-height:1.9;" class="">
+		<section style="font-size:11px;letter-spacing:1.5px;color:#17191b;text-transform:uppercase;margin-bottom:12px;" class="">
+			<strong>06 / LINEAR &amp; NONLINEAR</strong>
+		</section>
+		<section style="margin:0 0 16px;font-size:25px;line-height:1.3;text-align:left;" class="">
+			<strong>Linear is the most direct;</strong><br/><strong>nonlinear is where chaos and emergence appear.</strong>
+		</section>
+		<section style="font-size:15px;line-height:1.85;text-align:justify;" class="">
+			Mathematically, a linear function can be placed into the most direct control-and-response mapping. Beyond it there are nonlinear functions, which can produce chaos, emergence, and other behaviors.
+		</section>
+		<section style="font-size:15px;line-height:1.85;text-align:justify;" class="">
+			The whole universe can be seen as one enormous nonlinear function, and the basis of AI (or deep learning / neural networks) is the layering of linear combinations and nonlinear activation functions.
+		</section>
+		<section style="margin-top:18px;font-size:18px;line-height:1.7;" class="">
+			<strong>&#8212;In vvvv, every function can be described as a node,</strong><br/><strong>and as a runtime network made of nodes and links.</strong>
+		</section>
+	</section><!-- 06 -->
+	<section class="">
+		<p style="padding-top: 14px; font-size: 11px; border-top: 1px solid #c2c4c5; margin-top: 22px; line-height: 1.7; box-sizing: border-box;">
+			<span style="font-size: 15px;"><br/>This is the second article in the series.<br/><br/></span>
+		</p>
+		<p style="font-size:15px;line-height:1.85;margin:0 0 16px;text-align:justify;" align="justify">
+			vvvv / VL, as a domain-specific language (DSL) in a visual live-programming environment, rests on operating principles that are no different in essence from those of any other language.
+		</p>
+		<p style="font-size:15px;line-height:1.85;margin:0 0 16px;text-align:justify;" align="justify">
+			Nearly all mainstream programming languages today encapsulate functionality, including syntactic sugar, to make them easier to use and to lower cognitive complexity (though a badly designed program will still waste more computational resources).
+		</p>
+		<p style="font-size:15px;line-height:1.85;margin:0 0 16px;text-align:justify;" align="justify">
+			But users of these environments almost never become involved in managing the underlying runtime or the compiler's evaluation process (how the iteration and recursion produced by a computational process unfolds). Complexity unfolds mainly at the level of algorithm design, program architecture, and the many kinds of real engineering requirements.
+		</p>
+		<p style="font-size:15px;line-height:1.85;margin:0 0 16px;text-align:justify;" align="justify">
+			<a href="https://mp.weixin.qq.com/s?__biz=MzE5MTgwNDgzMg==&amp;mid=2247483659&amp;idx=1&amp;sn=d7c21c6da07fa0505b088343196933d2&amp;scene=21#wechat_redirect" style="color:#333333;text-decoration:underline;">Understanding Computation: Complexity and Its Limits</a>
+		</p>
+		<section style="margin:0 0 14px;text-align:justify;" align="justify" class="">
+			<section style="margin:18px 0;padding:20px 18px;background:#17191b;color:#f1f2ef;box-sizing:border-box;font-size:16px;line-height:1.85;" class="">
+				<strong>In John Locke's terms, humans are quite capable of learning vvvv on instinct alone; but with these principles of computation as tools for taking apart and building up, it goes more smoothly.</strong>
+			</section>
+			
+			
+			</section>
+			<p style="padding-top: 14px; font-size: 11px; border-top: 1px solid #c2c4c5; margin-top: 22px; line-height: 1.7; box-sizing: border-box;text-align:left;" align="left">
+				<span style="caret-color: red; color: #555b5e;"><br/>Useful links:<br/><br/></span><span style="caret-color: red; text-decoration-line: underline; color: #555b5e; font-size: 12px;"><strong style="text-decoration-line: underline; color: #000000;">Official website:</strong><strong style="text-decoration-line: underline; color: #000000;"><a href="https://vvvv.org/" _src="https://vvvv.org/" style="text-decoration-line: underline; color: #000000; font-size: 12px;">https://vvvv.org</a></strong></span><span style="font-size:12px;"><span style="caret-color: red; color: #555b5e; font-size: 12px;"><br/> </span><span style="caret-color: red; text-decoration-line: none; font-size: 12px;"><strong style="color: #17191b; text-decoration-line: underline; caret-color: red;">Official documentation (The Gray Book):</strong><strong style="color: #17191b; text-decoration-line: underline; caret-color: red;"><a href="https://thegraybook.vvvv.org/" style="color: #17191b; caret-color: red; text-decoration-line: none; font-size: 12px;">The Gray Book</a></strong></span><span style="color: #555b5e; caret-color: red; text-decoration-line: none; font-size: 12px;">&nbsp;<br/></span><strong style="color: #17191b; caret-color: red; text-decoration-line: underline;">Educational institution:</strong><strong style="color: #17191b; caret-color: red; text-decoration-line: underline;"><a href="https://thenodeinstitute.org/" style="color: #17191b; caret-color: red; text-decoration-line: underline; font-size: 12px;">The NODE Institute</a></strong><span style="color: #555b5e; caret-color: red; font-size: 12px;">&nbsp;<br/></span><span style="caret-color: red; color: #000000; text-decoration-line: underline; font-size: 12px;"><strong>Chinese-language website:</strong><strong><a href="https://www.nodenodenode.net" _src="https://www.nodenodenode.net" style="color: #000000; text-decoration-line: underline; font-size: 12px;">https://www.nodenodenode.net</a></strong></span><span style="caret-color: red; text-decoration-line: underline; color: #000000; font-size: 12px;"><strong><span style="color: #000000; caret-color: red; text-decoration-line: underline; font-size: 12px;"><br/></span>Chinese documentation: https://thegraybook.nodenodenode.net/&nbsp;</strong></span></span><span style="caret-color: red; text-decoration-line: underline; color: #000000;"><strong><br/></strong></span>
+			</p>
+			<section style="padding-top: 14px; font-size: 11px; border-top: 1px solid #c2c4c5; margin-top: 22px; line-height: 1.7; box-sizing: border-box;text-align:left;" align="left" class="">
+				<br/>
+				<section style="display: flex; align-items: flex-start; gap: 12px; padding: 18px 0px 6px; width: 100%; flex: 0 0 100%;max-width:100% !important;box-sizing:border-box;" class="" data-width="100%">
+					<section style="width:3px;height:100%;min-height:110px;background:#ff503d;flex-shrink:0;box-sizing:border-box;" class="" data-ignore-width></section>
+					<section style="font-size:12px;line-height:1.9;color:#17191b;box-sizing:border-box;" class="">
+						<section style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#555b5e;margin-bottom:4px;box-sizing:border-box;" class="">
+							Author
+						</section>
+						<section style="font-size:18px;letter-spacing:0.5px;box-sizing:border-box;" class="">
+							<strong>Mokusama</strong>
+						</section>
+						<section style="margin-top:6px;box-sizing:border-box;" class="">
+							Designer / Artist | Art &amp; Technology · Creative Computing
+						
+						<section style="margin-top:6px;color:#555b5e;box-sizing:border-box;" class="">
+							Connecting creative communities and makers
+						</section>
+						<section style="margin-top: 8px; font-size: 11px; letter-spacing: 1.4px; color: #ff503d; text-transform: uppercase; box-sizing: border-box;" class="">
+							<strong><span style="font-size: 11px;"># vvvvcommunity</span></strong>
+						</section>
+					</section>
+				</section>
+			</section><!--!doctype-->
+		</section>
+	</section>
+</section>
