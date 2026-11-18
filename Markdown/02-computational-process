@@ -1,0 +1,157 @@
+*Mokusama · 22.5566,114.0982 · 26,10,2026 · VOL.002 — VL / VVVV · CREATIVE COMPUTING*
+
+*Computational Process · Functions · Levels of Abstraction*
+
+# Understanding Computation: Computational Process.
+
+**Structured Notes on Self-Study Creative Computing with vvvv gamma**
+
+Don't just look at the results. Try to see how data is processed by rules, and whether you can rewrite those rules yourself.
+
+*Computational Process. FUNCTION. Abstraction LEVELS.*
+
+---
+
+## 01 / EPIGRAPH — JOHN LOCKE, 1690
+
+**Three basic operations of the mind.**
+
+*The acts of the mind, wherein it exerts its power over simple ideas, are chiefly these three:*
+
+*1. Combining several simple ideas into one compound one—and thus all complex ideas are made.*
+
+*2. Bringing two ideas, whether simple or complex, together, and setting them by one another so as to take a view of them at once, without uniting them into one—by which it gets all its ideas of relations.*
+
+*3. Separating them from all other ideas that accompany them in their real existence; this is called abstraction, and thus all its general ideas are made.*
+
+— John Locke, *An Essay Concerning Human Understanding* (1690)
+
+Locke is describing the three basic operations the mind performs on ideas:
+
+**Combination**
+
+**Relation (comparison, to form ideas of relations)**
+
+**Abstraction**
+
+Words written more than three hundred years ago land exactly on what we do in vvvv without noticing—wiring nodes, parameters and Pads together; laying several sets of logic side by side to compare them; distilling rules out of Patches that already exist.
+
+Humans manage all of it by instinct.
+
+## 02 / PROGRAM VISIBILITY
+
+**Program visibility is also a degree of freedom.**
+
+Copying Patches, copying examples, dragging nodes and adjusting parameters is a fast way to get started—but the complexity of computation and of programs is not there to make the user's job harder. Don't be overwhelmed by a screen full of nodes and connections: program visibility is also a degree of freedom.
+
+At different levels of abstraction, the things a person can do are different.
+
+This is also why this series shares computational thinking rather than specific examples: AI can already do a great many things, and it is especially good at copying and migrating what already exists. How to open up more possibilities by understanding the computational process is a direction worth considering.
+
+## 03 / START WITH THE FUNCTION
+
+**Everything begins with understanding the function.**
+
+Function.
+
+**y = f(x)**
+
+**A function can be seen as the relationship between input, output, and a processing rule.**
+
+**Input a pig, output a bowl of pork-trotter rice.**
+
+**We abstract this processing into a function and name it “Kitchen.”**
+
+**input → function → output**
+
+Expanded in vvvv, the data flows from top to bottom:
+
+![The vvvv patch for y = f(x): an Input node feeding a Function node, whose result leaves as Output](images/02-fig-1.png)
+
+## 04 / THREE LAYERS
+
+**Primitives, encapsulation, black box.**
+
+Take a classic linear function as an example:
+
+**y = kx + b**
+
+![The same idea built from primitives: 3 × 1, then + 1, giving 4](images/02-fig-2.png)
+
+This is an expression built from vvvv's basic primitives and math library.
+
+It means that everything can be reduced to a mathematical computational process.
+
+![The expression encapsulated as a single function node, f(kx+b)](images/02-fig-3.png)
+
+This is the first expression, encapsulated as the function f (kx+b).
+
+It keeps the control structure, but the rules of operation are hidden.
+
+![kx+b_Pro: a single parameter in, a number out — the black box](images/02-fig-4.png)
+
+This is what we encounter most often; a structure like this can take the form of any program.
+
+I named it the Pro version of kx+b: with a single operating parameter you get an approximate result. It is an opaque black box.
+
+Don't think about k and b here: if you are not its designer and have no permission to go inside, that thinking loses its practical meaning.
+
+(In fact it is an ultimate deluxe black box merely named kx+b_Pro: I put no computation inside it at all, only a value of 4, of type Integer32, on the output: p)
+
+If we encapsulate a complex program completely and expose only one small interactive button, or keep just one dialog box, would it become a nearly perfect product?
+
+> **it is how much of the computational process itself you can see,**  
+> **and at which level you do the designing and defining.**
+
+## 05 / THE PROCESS ITSELF
+
+**The computational process itself is an abstract thing.**
+
+In short, everything is about **Computational Process**.
+
+The computational process itself is an abstract thing. It is not a node, not code, not anything visible on the screen. It is the abstraction of "data being processed by rules."
+
+**Process (an abstraction) → Operation → Data (an abstraction)**
+
+**These processes are guided by a program (a pattern of rules)**
+
+The function y = f (x) is one way of describing a process.
+
+A node is a visual presentation of a process.
+
+A Patch is an organizational structure for a process.
+
+But the process itself—"one thing becoming another thing through some rule"—exists before any of these concrete forms.
+
+## 06 / LINEAR & NONLINEAR
+
+**Linear is the most direct; nonlinear is where chaos and emergence appear.**
+
+Mathematically, a linear function can be placed into the most direct control-and-response mapping. Beyond it there are nonlinear functions, which can produce chaos, emergence, and other behaviors.
+
+The whole universe can be seen as one enormous nonlinear function, and the basis of AI (or deep learning / neural networks) is the layering of linear combinations and nonlinear activation functions.
+
+> **—In vvvv, every function can be described as a node, and as a runtime network made of nodes and links.**
+
+---
+
+This is the second article in the series.
+
+vvvv / VL, as a domain-specific language (DSL) in a visual live-programming environment, rests on operating principles that are no different in essence from those of any other language.
+
+Nearly all mainstream programming languages today encapsulate functionality, including syntactic sugar, to make them easier to use and to lower cognitive complexity (though a badly designed program will still waste more computational resources).
+
+But users of these environments almost never become involved in managing the underlying runtime or the compiler's evaluation process (how the iteration and recursion produced by a computational process unfolds). Complexity unfolds mainly at the level of algorithm design, program architecture, and the many kinds of real engineering requirements.
+
+**Previously in this series**
+
+- [Understanding Computation: Complexity and Its Limits](https://mp.weixin.qq.com/s?__biz=MzE5MTgwNDgzMg==&mid=2247483659&idx=1&sn=d7c21c6da07fa0505b088343196933d2&scene=21#wechat_redirect)
+
+> In John Locke's terms, humans are quite capable of learning vvvv on instinct alone; but with these principles of computation as tools for taking apart and building up, it goes more smoothly.
+
+---
+
+**Mokusama**  
+Designer / Artist | Art & Technology · Creative Computing  
+Connecting creative communities and makers  
+# vvvvcommunity
